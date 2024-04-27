@@ -1,7 +1,12 @@
+// src/app/module1/Stages/Stage1.tsx
+
+import SideBar from '../Components/sidebar';
 export default function Stage1() {
+  
+
   return (
+  <div className="flex flex-row max-md:flex-col max-md:gap-50">
     <div className="flex flex-col bg-white">
-      
       <div className="self-center w-full max-w-[1372px] max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-[67%] max-md:ml-0 max-md:w-full">
@@ -45,17 +50,26 @@ export default function Stage1() {
                               />
                             </div>
                             <div className="flex gap-2 text-base text-amber-500">
-                              <div className="justify-center px-2 py-1 whitespace-nowrap bg-white rounded border border-amber-500 border-solid">
+                              <div
+                                className="justify-center px-2 py-1 whitespace-nowrap bg-white rounded border border-amber-500 border-solid"
+                                
+                              >
                                 Music
                               </div>
-                              <div className="justify-center px-2 py-1 bg-white rounded border border-amber-500 border-solid">
+                              <div
+                                className="justify-center px-2 py-1 bg-white rounded border border-amber-500 border-solid"
+                                
+                              >
                                 Mental Health
                               </div>
                             </div>
                           </div>
-                          <div className="justify-center items-start px-3.5 py-3.5 mt-4 text-base bg-white rounded-lg border border-solid border-zinc-300 text-stone-300 max-md:pr-5 max-md:max-w-full">
-                            Type your interest here
-                          </div>
+                          <input
+                            type="text"
+                            className="justify-center items-start px-3.5 py-3.5 mt-4 text-base rounded-lg border border-solid border-zinc-300 text-black max-md:pr-5 max-md:max-w-full"
+                            placeholder="Type your interest here"
+                            
+                          />
                         </div>
                       </div>
                     </div>
@@ -66,14 +80,16 @@ export default function Stage1() {
                     className="shrink-0 self-end mt-40 aspect-square w-[43px] max-md:mt-10"
                   />
                 </div>
-                <div className="justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
-                  Next{" "}
-                </div>
+                <button className="justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
+                  Next
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <SideBar StageNumber={1} />
+  </div>    
   );
 }

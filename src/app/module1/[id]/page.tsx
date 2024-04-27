@@ -16,19 +16,12 @@ interface Params {
 
 export default function Module({params} : { params: Params }) {
   
+  // Retrieve the stage component based on the current stage ID
   const StageRouter = stages[params.id] || <div>Invalid stage</div>;
-
   return (
-
-        
-
-        <div className="w-full max-w-[1301px] ml-14 mr-14">
-        <div className="flex flex-row max-md:flex-col max-md:gap-50">
-            {StageRouter}
-            <SideBar  StageNumber={params.id}/>                 
-        </div>
+      <div className="w-full max-w-[1301px] ml-14 mr-14">
+            {StageRouter}          
       </div>
-
   );
 }
 
