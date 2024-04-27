@@ -2,14 +2,9 @@
 
 import React, { useState } from 'react';
 import SideBar from '../Components/sidebar';
-import { Link } from 'react-router-dom';
-import Stage2 from '../Stage2/page';
+import { Link } from 'next/link';
 
-interface Params {
-  id: string;
-}
-
-export default function Stage1({ params }: { params: Params }) {
+export default function Stage1() {
 
   
   return (
@@ -92,8 +87,9 @@ export default function Stage1({ params }: { params: Params }) {
                     
                       <button
                         className="justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
-                        Next
+                        
                       </button>
+                      
                   </div>
                 </div>
               </div>
