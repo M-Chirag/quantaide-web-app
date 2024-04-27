@@ -32,6 +32,10 @@ body {
   }
 }
 
+aside {
+  transition: width 0.3s ease-in-out;
+}
+
 .root-container {
   margin: 0;
   padding: 0;
