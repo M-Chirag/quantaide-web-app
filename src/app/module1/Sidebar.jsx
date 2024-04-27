@@ -1,6 +1,6 @@
 'use client';
 import { useContext, createContext, useState } from 'react';
-import { MoreVertical, ChevronLast, ChevronFirst } from 'lucide-react';
+import { PanelLeft, ChevronLast, ChevronFirst } from 'lucide-react';
 import Link from 'next/link';
 
 const SidebarContext = createContext(null);
@@ -12,13 +12,14 @@ export function Sidebar({ children }) {
     <aside className='h-screen fixed right-7'>
       <nav className='h-full flex flex-col bg-white border-r shadow-sm'>
         <div className='p-4 pb-2 flex justify-between items-center'>
-          <img
-            src='https://cdn.builder.io/api/v1/image/assets/TEMP/187bd80cf52f75aedeb008493f9b6b39d8a2b52dc04bab43aa927c8b2f6119d1?apiKey=2a09c3227636445ca6cca45824f0323c&'
+          <PanelLeft
             className={`shrink-0 aspect-[0.4] mt-2.5 overflow-hidden transition-all ${
-              expanded ? 'w-25' : 'w-0'
+              expanded ? 'w-6 h-6' : 'w-0 h-0'
             }`}
-            alt='logo'
           />
+          <span className={`transition-all ${expanded ? 'inline' : 'hidden'}`}>
+            Module 1
+          </span>
           <button
             onClick={() => setExpanded((curr) => !curr)}
             className='p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100'
@@ -35,7 +36,7 @@ export function Sidebar({ children }) {
   );
 }
 
-export function SidebarItem({ icon, text, active, href }) {
+export function SidebarItem({ number, text, active, href }) {
   const { expanded } = useContext(SidebarContext);
 
   return (
@@ -47,7 +48,11 @@ export function SidebarItem({ icon, text, active, href }) {
             : 'text-gray-600 hover:bg-gray-300 hover:text-gray-700'
         }`}
       >
-        {icon}
+        {/* {icon} */}
+
+        <span className={`font-bold ${expanded ? '' : 'hidden'}`}>
+          {number}
+        </span>
         <span
           className={`overflow-hidden transition-all ${
             expanded ? 'w-72 ml-5' : 'w-0'

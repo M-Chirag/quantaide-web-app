@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 
 import Link from 'next/link';
 import { Sidebar, SidebarItem } from '../Sidebar'; 
-import { HomeIcon, SettingsIcon, LayoutDashboard  } from "lucide-react";
+import { PanelLeft, Clipboard, BookOpen, UserCheck, FilePlus, Hand, LayoutDashboard } from 'lucide-react';
+
 
 function Stage1() {  
   return (
@@ -102,10 +103,13 @@ function Stage1() {
         </div>
         
         <Sidebar>
-          <SidebarItem icon={<HomeIcon />} text="Dashboard" active={true} href="/" />
-          <SidebarItem icon={<SettingsIcon />} text="Settings" active={false} href="../module1/stage1" />
-          <SidebarItem icon={<LayoutDashboard />} text="Notifications" active={false} href="/notifications" />
-    </Sidebar>
+  <SidebarItem number="1" text="Choose your Interest" active={true} href="/module1/stage1" />
+  <SidebarItem number="2" text="What goes into problem statement?" active={false} href="/module1/stage2" />
+  <SidebarItem number="3" text="Conducting ‘problem-based’ deductive research" active={false} href="/module1/stage3" />
+  <SidebarItem number="4" text="The Three Criteria" active={false} href="/module1/stage4" />
+  <SidebarItem number="5" text="Examples of problem statements" active={false} href="/module1/stage5" />
+  <SidebarItem number="6" text="Let’s get hands on!" active={false} href="/module1/stage6" />
+</Sidebar>
       </div>
     </div>
     </div>
