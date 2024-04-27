@@ -1,12 +1,9 @@
-"use client";
-
+"use client";   
 import React, { useState } from 'react';
 import SideBar from '../Components/sidebar';
 import { Link } from 'next/link';
 
-export default function Stage1() {
-
-  
+function Stage1() {  
   return (
     <div className="w-full max-w-[1301px] ml-14 mr-14"> 
     <div className="w-full max-w-[1301px] ml-14 mr-14">
@@ -84,10 +81,9 @@ export default function Stage1() {
                     </div>
                     
                     
-                    
                       <button
                         className="justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
-                        
+                        Next
                       </button>
                       
                   </div>
@@ -102,3 +98,6 @@ export default function Stage1() {
     </div>
   );
 }
+
+
+export default Stage1;

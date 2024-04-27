@@ -38,7 +38,7 @@ function Stage1() {
                                                                     react_1["default"].createElement("div", { className: "justify-center px-2 py-1 bg-white rounded border border-amber-500 border-solid" }, "Mental Health"))),
                                                             react_1["default"].createElement("input", { type: "text", className: "justify-center items-start px-3.5 py-3.5 mt-4 text-base rounded-lg border border-solid border-zinc-300 text-black max-md:pr-5 max-md:max-w-full", placeholder: "Type your interest here" }))))),
                                             react_1["default"].createElement("img", { loading: "lazy", src: "https://cdn.builder.io/api/v1/image/assets/TEMP/7ea439422e8e5f5968afdc3d38dc703980a26ef5e7fd8df5b16115fdb9b57632?apiKey=2a09c3227636445ca6cca45824f0323c&", className: "shrink-0 self-end mt-40 aspect-square w-[43px] max-md:mt-10" })),
-                                        react_1["default"].createElement("button", { className: "justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10" }))))))),
+                                        react_1["default"].createElement("button", { className: "justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10" }, "Next"))))))),
                 react_1["default"].createElement(sidebar_1["default"], { StageNumber: 1 })))));
 }
 exports["default"] = Stage1;
