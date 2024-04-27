@@ -1,7 +1,13 @@
+"use client";
+
+import React, { useState } from 'react';
 import SideBar from '../Components/sidebar';
-export default function Stage2() {
+import { Link } from 'react-router-dom';
+
+export default function Stage2({ params }: { params: Params }) {
   return (
-  <div className="flex flex-row max-md:flex-col max-md:gap-50">
+    <div className="w-full max-w-[1301px] ml-14 mr-14">
+      <div className="flex flex-row max-md:flex-col max-md:gap-50">
     <div className="flex flex-col bg-white">
       <div className="self-center w-full max-w-[1372px] max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
@@ -44,7 +50,6 @@ export default function Stage2() {
     </div>
     <SideBar StageNumber={2} />
   </div>
+    </div>
   );
 }
-
-
