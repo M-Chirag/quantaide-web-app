@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from 'react';
-import SideBar from '../Components/sidebar';
-import { Link } from 'react-router-dom';
+import { Sidebar, SidebarItem } from '../Sidebar'; 
+import Link from 'next/link';
+import { HomeIcon, SettingsIcon, LayoutDashboard  } from "lucide-react";
 
-export default function Stage2({ params }: { params: Params }) {
+export default function Stage2() {
   return (
     <div className="w-full max-w-[1301px] ml-14 mr-14">
       <div className="flex flex-row max-md:flex-col max-md:gap-50">
@@ -48,7 +49,11 @@ export default function Stage2({ params }: { params: Params }) {
         </div>
       </div>
     </div>
-    <SideBar StageNumber={2} />
+        <Sidebar>
+          <SidebarItem icon={<HomeIcon />} text="Dashboard" active={true} href="/" />
+          <SidebarItem icon={<SettingsIcon />} text="Settings" active={false} href="../module1/stage1" />
+          <SidebarItem icon={<LayoutDashboard />} text="Notifications" active={false} href="/notifications" />
+    </Sidebar>
   </div>
     </div>
   );

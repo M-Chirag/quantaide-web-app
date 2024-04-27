@@ -1,7 +1,6 @@
 import Image from "next/image";
 import ModuleCard from '../components/ModuleCard';
-import { Sidebar } from '../components/Sidebar'; 
-import { SidebarItem } from '../components/Sidebar'; 
+import { Sidebar,SidebarItem } from './module1/Sidebar'; 
 import { HomeIcon, SettingsIcon, LayoutDashboard  } from "lucide-react";
 export default function Home() {
   return (
@@ -14,9 +13,9 @@ export default function Home() {
       />
       
       <Sidebar>
-      <SidebarItem icon={<HomeIcon />} text="Dashboard" active={true}  />
-      <SidebarItem icon={<SettingsIcon />} text="Settings" active={false}  />
-      <SidebarItem icon={<LayoutDashboard />} text="Notifications" active={false} />
+        <SidebarItem icon={<HomeIcon />} text="Dashboard" active={true} href="/" />
+        <SidebarItem icon={<SettingsIcon />} text="Settings" active={false} href="../module1/stage1" />
+        <SidebarItem icon={<LayoutDashboard />} text="Notifications" active={false} href="/notifications" />
       </Sidebar>
       </div>
   );

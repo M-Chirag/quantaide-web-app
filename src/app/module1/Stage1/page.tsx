@@ -1,7 +1,9 @@
 "use client";   
 import React, { useState } from 'react';
-import SideBar from '../Components/sidebar';
-import { Link } from 'next/link';
+
+import Link from 'next/link';
+import { Sidebar, SidebarItem } from '../Sidebar'; 
+import { HomeIcon, SettingsIcon, LayoutDashboard  } from "lucide-react";
 
 function Stage1() {  
   return (
@@ -14,11 +16,15 @@ function Stage1() {
               <div className="flex flex-col w-[67%] max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col mt-9 max-md:mt-10 max-md:max-w-full">
                   <div className="flex gap-5 justify-between self-start text-black">
-                    <img
+                    <Link href="/">
+                      <button>
+                      <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/860d96c9cbbdfa6d1135252de5487b1f79a55f9cf012f94b3462c1601ceaaadc?apiKey=2a09c3227636445ca6cca45824f0323c&"
                       className="shrink-0 my-auto w-10 aspect-square"
-                    />
+                          />
+                        </button>
+                      </Link>
                     <div className="flex flex-col justify-end px-5">
                       <div className="text-xs">Problem Statement</div>
                       <div className="mt-1 text-xl font-bold">
@@ -81,18 +87,25 @@ function Stage1() {
                     </div>
                     
                     
+                    <Link href={"../module1/stage2"} passHref>
                       <button
-                        className="justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
-                        Next
-                      </button>
-                      
+                        
+                          className="justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
+                        Next</button>
+                        
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <SideBar StageNumber={1} />
+        
+        <Sidebar>
+          <SidebarItem icon={<HomeIcon />} text="Dashboard" active={true} href="/" />
+          <SidebarItem icon={<SettingsIcon />} text="Settings" active={false} href="../module1/stage1" />
+          <SidebarItem icon={<LayoutDashboard />} text="Notifications" active={false} href="/notifications" />
+    </Sidebar>
       </div>
     </div>
     </div>
