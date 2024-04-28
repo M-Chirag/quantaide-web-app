@@ -64,7 +64,7 @@ function Stage6() {
                     </div>
                     
                     <div className="flex justify-end">
-                    <Link href={"/"} passHref>
+                    <Link href={"/module1/complete"} passHref>
                       <button
                         
                           className="justify-center self-end px-10 py-2.5 mt-10 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
