@@ -43,7 +43,7 @@ export function Sidebar({ children }) {
 
 export function SidebarItem({ number, text, active, stageNumber,  href }) {
   const { expanded } = useContext(SidebarContext);
-
+  
   return (
     <Link href={href} passHref>
       <li
@@ -55,7 +55,11 @@ export function SidebarItem({ number, text, active, stageNumber,  href }) {
       >
         {/* {icon} */}
 
-        <span className={`${expanded ? 'inline-flex items-center justify-center  h-8 w-8 rounded-full text-xs bg-gray-100 text-black border-gray-200' : 'hidden'}`}>
+        <span className={`${expanded ? 
+                            'inline-flex items-center justify-center  h-8 w-8 rounded-full text-xs  border-gray-200' 
+                            : 'hidden'}
+                            ${ parseInt(number) < parseInt(stageNumber) ? 'text-green-800 bg-green-100' : 'text-black bg-gray-100'}
+                          `}>
           {number}
         </span>
         <span

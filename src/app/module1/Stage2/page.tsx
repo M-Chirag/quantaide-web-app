@@ -50,8 +50,8 @@ export default function Stage2() {
       </div>
     </div>
     <Sidebar>
-  <SidebarItem number="1" text="Choose your Interest" active={false} stageNumber = {1} href="/module1/Stage1" />
-  <SidebarItem number="2" text="What goes into problem statement?" active={true} stageNumber = {2} href="/module1/stage2" />
+  <SidebarItem number="1" text="Choose your Interest" active={false} stageNumber = "2" href="/module1/Stage1" />
+  <SidebarItem number="2" text="What goes into problem statement?" active={true} stageNumber = "2" href="/module1/stage2" />
   <SidebarItem number="3" text="Conducting ‘problem-based’ deductive research" active={false} stageNumber = {3} href="/module1/stage3" />
   <SidebarItem number="4" text="The Three Criteria" active={false} stageNumber = {4} href="/module1/stage4" />
   <SidebarItem number="5" text="Examples of problem statements" active={false} stageNumber = {5} href="/module1/stage5" />
