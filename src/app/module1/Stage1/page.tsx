@@ -87,14 +87,14 @@ function Stage1() {
                       />
                     </div>
                     
-                    
+                    <div className="flex justify-end">
                     <Link href={"../module1/stage2"} passHref>
                       <button
                         
-                          className="justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
-                        Next</button>
+                          className="justify-center self-end px-10 py-2.5 mr-14 mt-10 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
+                        Done</button>
                         
-                    </Link>
+                    </Link></div>
                   </div>
                 </div>
               </div>
