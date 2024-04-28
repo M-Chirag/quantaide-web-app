@@ -2,9 +2,8 @@
 "use strict";
 exports.__esModule = true;
 var react_1 = require("react");
-var sidebar_1 = require("../Components/sidebar");
-function Stage2(_a) {
-    var params = _a.params;
+var Sidebar_1 = require("../Sidebar");
+function Stage2() {
     return (react_1["default"].createElement("div", { className: "w-full max-w-[1301px] ml-14 mr-14" },
         react_1["default"].createElement("div", { className: "flex flex-row max-md:flex-col max-md:gap-50" },
             react_1["default"].createElement("div", { className: "flex flex-col bg-white" },
@@ -28,6 +27,12 @@ function Stage2(_a) {
                                     react_1["default"].createElement("div", { className: "justify-center self-end px-10 py-2.5 mt-7 font-bold text-white bg-amber-500 rounded-md max-md:px-5" },
                                         "Next",
                                         " "))))))),
-            react_1["default"].createElement(sidebar_1["default"], { StageNumber: 2 }))));
+            react_1["default"].createElement(Sidebar_1.Sidebar, null,
+                react_1["default"].createElement(Sidebar_1.SidebarItem, { number: "1", text: "Choose your Interest", active: false, stageNumber: 1, href: "/module1/Stage1" }),
+                react_1["default"].createElement(Sidebar_1.SidebarItem, { number: "2", text: "What goes into problem statement?", active: true, stageNumber: 2, href: "/module1/stage2" }),
+                react_1["default"].createElement(Sidebar_1.SidebarItem, { number: "3", text: "Conducting \u2018problem-based\u2019 deductive research", active: false, stageNumber: 3, href: "/module1/stage3" }),
+                react_1["default"].createElement(Sidebar_1.SidebarItem, { number: "4", text: "The Three Criteria", active: false, stageNumber: 4, href: "/module1/stage4" }),
+                react_1["default"].createElement(Sidebar_1.SidebarItem, { number: "5", text: "Examples of problem statements", active: false, stageNumber: 5, href: "/module1/stage5" }),
+                react_1["default"].createElement(Sidebar_1.SidebarItem, { number: "6", text: "Let\u2019s get hands on!", active: false, stageNumber: 6, href: "/module1/stage6" })))));
 }
 exports["default"] = Stage2;
