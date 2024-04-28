@@ -103,12 +103,12 @@ function Stage1() {
         </div>
         
         <Sidebar>
-  <SidebarItem number="1" text="Choose your Interest" active={true} href="/module1/stage1" />
-  <SidebarItem number="2" text="What goes into problem statement?" active={false} href="/module1/stage2" />
-  <SidebarItem number="3" text="Conducting ‘problem-based’ deductive research" active={false} href="/module1/stage3" />
-  <SidebarItem number="4" text="The Three Criteria" active={false} href="/module1/stage4" />
-  <SidebarItem number="5" text="Examples of problem statements" active={false} href="/module1/stage5" />
-  <SidebarItem number="6" text="Let’s get hands on!" active={false} href="/module1/stage6" />
+  <SidebarItem number="1" text="Choose your Interest" active={true} stageNumber = "1" href="/module1/stage1" />
+  <SidebarItem number="2" text="What goes into problem statement?" stageNumber = "1" active={false} href="/module1/stage2" />
+  <SidebarItem number="3" text="Conducting ‘problem-based’ deductive research" stageNumber = "1" active={false} href="/module1/stage3" />
+  <SidebarItem number="4" text="The Three Criteria" stageNumber = "1" active={false} href="/module1/stage4" />
+  <SidebarItem number="5" text="Examples of problem statements" stageNumber = "1" active={false} href="/module1/stage5" />
+  <SidebarItem number="6" text="Let’s get hands on!" stageNumber = "1" active={false} href="/module1/stage6" />
 </Sidebar>
       </div>
     </div>

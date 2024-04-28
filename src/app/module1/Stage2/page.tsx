@@ -15,11 +15,15 @@ export default function Stage2() {
           <div className="flex flex-col w-[69%] max-md:ml-0 max-md:w-full">
             <div className="flex flex-col mt-9 text-black max-md:mt-10 max-md:max-w-full">
               <div className="flex gap-5 self-start">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/860d96c9cbbdfa6d1135252de5487b1f79a55f9cf012f94b3462c1601ceaaadc?apiKey=2a09c3227636445ca6cca45824f0323c&"
-                  className="shrink-0 my-auto w-10 aspect-square"
-                />
+                <Link href="/module1/stage1">
+                      <button>
+                      <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/860d96c9cbbdfa6d1135252de5487b1f79a55f9cf012f94b3462c1601ceaaadc?apiKey=2a09c3227636445ca6cca45824f0323c&"
+                      className="shrink-0 my-auto w-10 aspect-square"
+                          />
+                        </button>
+                      </Link>
                 <div className="flex flex-col grow shrink-0 justify-end px-5 basis-0 w-fit">
                   <div className="text-xs">Problem Statement</div>
                   <div className="mt-1 text-xl font-bold">
@@ -40,9 +44,13 @@ export default function Stage2() {
                   Typical research design process:{" "}
                 </div>
                 <div className="shrink-0 mt-4 h-80 rounded-lg bg-neutral-100 max-md:max-w-full" />
-                <div className="justify-center self-end px-10 py-2.5 mt-7 font-bold text-white bg-amber-500 rounded-md max-md:px-5">
-                  Next{" "}
-                </div>
+                <Link href={"../module1/stage3"} passHref>
+                      <button
+                        
+                          className="justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
+                        Next</button>
+                        
+                    </Link>
               </div>
             </div>
           </div>
@@ -50,7 +58,7 @@ export default function Stage2() {
       </div>
     </div>
     <Sidebar>
-  <SidebarItem number="1" text="Choose your Interest" active={false} stageNumber = "2" href="/module1/Stage1" />
+  <SidebarItem number="1" text="Choose your Interest" active={false} stageNumber = "2" href="/module1/stage1" />
   <SidebarItem number="2" text="What goes into problem statement?" active={true} stageNumber = "2" href="/module1/stage2" />
   <SidebarItem number="3" text="Conducting ‘problem-based’ deductive research" active={false} stageNumber = {3} href="/module1/stage3" />
   <SidebarItem number="4" text="The Three Criteria" active={false} stageNumber = {4} href="/module1/stage4" />
