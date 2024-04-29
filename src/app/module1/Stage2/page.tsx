@@ -5,7 +5,7 @@ import { Sidebar, SidebarItem } from '../Sidebar';
 import Link from 'next/link';
 import { HomeIcon, SettingsIcon, LayoutDashboard  } from "lucide-react";
 
-export default function Stage2() {
+export default function stage2() {
   return (
     <div className="w-full max-w-[1301px] ml-14 mr-14">
       <div className="flex flex-row max-md:flex-col max-md:gap-50">

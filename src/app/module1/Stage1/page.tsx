@@ -6,7 +6,7 @@ import { Sidebar, SidebarItem } from '../Sidebar';
 import { PanelLeft, Clipboard, BookOpen, UserCheck, FilePlus, Hand, LayoutDashboard } from 'lucide-react';
 
 
-function Stage1() {  
+function stage1() {  
   return (
     <div className="w-full max-w-[1301px] ml-14 mr-14"> 
     <div className="w-full max-w-[1301px] ml-14 mr-14">
@@ -117,4 +117,4 @@ function Stage1() {
 }
 
 
-export default Stage1;
+export default stage1;

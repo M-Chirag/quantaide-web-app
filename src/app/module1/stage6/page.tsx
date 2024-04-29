@@ -28,7 +28,7 @@ const scoreMappings: { [key: number]: { text: string; color: string } } = {
   5: { text: 'Excellent', color: 'text-green-500' },
 };
 
-export default function Stage6() {
+export default function stage6() {
   const router = useRouter();
   const [body, setBody] = useState('');
   const [isLoading, setIsLoading] = useState(false);
