@@ -114,7 +114,7 @@ export default function Stage6() {
     ))}
   </div>
             <div
-              className="flex flex-row justify-center w-4/7 h-1/3 px-3.5 py-3.5 mt-2 text-base rounded-lg border border-solid border-zinc-300 text-black resize-vertical"
+              className="flex flex-row justify-left w-4/7 h-1/3 px-3.5 py-3.5 mt-2 text-base rounded-lg border border-solid border-zinc-300 text-black resize-vertical"
             >{body}</div>
 </div>
           {/* The 3 AI responses will be displayed here. */}
