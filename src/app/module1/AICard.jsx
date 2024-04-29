@@ -9,7 +9,7 @@ export function AICard({ cardNumber, text, onCheckClick, onCrossClick }) {
         <div className='flex justify-center items-center self-start p-2'>
           <img
             loading='lazy'
-            src='https://cdn.builder.io/api/v1/image/assets/TEMP/19e29c3d7422a2d35231dcd1f0f8b39abcae4c62edf6a2ec7ec112706f7bf50e?apiKey=2a09c3227636445ca6cca45824f0323c&'
+            src='../19e29c3d7422a2d35231dcd1f0f8b39abcae4c62edf6a2ec7ec112706f7bf50e.svg'
             className='aspect-[1.04] fill-amber-500 w-[25px]'
           />
         </div>

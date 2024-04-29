@@ -21,7 +21,7 @@ function Stage1() {
                       <button>
                       <img
                       loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/860d96c9cbbdfa6d1135252de5487b1f79a55f9cf012f94b3462c1601ceaaadc?apiKey=2a09c3227636445ca6cca45824f0323c&"
+                      src="../860d96c9cbbdfa6d1135252de5487b1f79a55f9cf012f94b3462c1601ceaaadc.svg"
                       className="shrink-0 my-auto w-10 aspect-square"
                           />
                         </button>
@@ -54,7 +54,7 @@ function Stage1() {
                                 <div className="flex justify-center items-center p-1">
                                   <img
                                     loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/19e29c3d7422a2d35231dcd1f0f8b39abcae4c62edf6a2ec7ec112706f7bf50e?apiKey=2a09c3227636445ca6cca45824f0323c&"
+                                    src="../19e29c3d7422a2d35231dcd1f0f8b39abcae4c62edf6a2ec7ec112706f7bf50e.svg"
                                     className="aspect-[1.04] fill-amber-500 w-[25px]"
                                   />
                                 </div>
@@ -82,7 +82,7 @@ function Stage1() {
                       </div>
                       <img
                         loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/7ea439422e8e5f5968afdc3d38dc703980a26ef5e7fd8df5b16115fdb9b57632?apiKey=2a09c3227636445ca6cca45824f0323c&"
+                        src="../7ea439422e8e5f5968afdc3d38dc703980a26ef5e7fd8df5b16115fdb9b57632.svg"
                         className="shrink-0 self-end mt-40 aspect-square w-[43px] max-md:mt-10"
                       />
                     </div>

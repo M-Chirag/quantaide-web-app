@@ -7,7 +7,7 @@ export default function Module1Complete() {
         <div className="flex gap-5 justify-between max-w-full w-[842px] max-md:flex-wrap">
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/087a01cbbf2b75be759f9dd9f0f39c1ca635270e2e419a54fb9e3202d3b4fdeb?apiKey=2a09c3227636445ca6cca45824f0323c&"
+            src="../087a01cbbf2b75be759f9dd9f0f39c1ca635270e2e419a54fb9e3202d3b4fdeb.svg"
             className="shrink-0 max-w-full aspect-[0.47] w-[104px]"
           />
           <div className="flex flex-col my-auto max-md:max-w-full">
@@ -18,15 +18,14 @@ export default function Module1Complete() {
               Did you know?{" "}
             </div>
             <div className="mt-4 max-md:max-w-full">
-              The sequence of questions in a survey can influence respondents'
-              answers, known as &quot;question order effects.&quot;
+              The sequence of questions in a survey can influence respondents answers known as question order effects
             </div>
           </div>
         </div>
       </div>
       <div className="flex flex-col self-center px-5 mt-20 w-full max-w-[1117px] max-md:mt-10 max-md:max-w-full">
         <div className="text-2xl font-bold text-black max-md:max-w-full">
-          What’s next?{" "}
+          Whats next?{" "}
         </div>
         <div className="px-px mt-8 max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
@@ -35,7 +34,9 @@ export default function Module1Complete() {
                 <div className="text-xs">Module 2</div>
                 <img
                   loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&"
+                  srcSet="../27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3.png"
+                  
+                  
                   className="self-start mt-4 w-full aspect-[1.72]"
                 />
                 <div className="mt-5 text-xl font-bold">Justification</div>
@@ -57,7 +58,7 @@ export default function Module1Complete() {
                 <div className="text-xs">Module 3</div>
                 <img
                   loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&"
+                  srcSet="../d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3.png"
                   className="mt-4 w-full aspect-[1.72]"
                 />
                 <div className="mt-5 text-xl font-bold">Argument</div>
@@ -73,7 +74,7 @@ export default function Module1Complete() {
                 <div className="flex flex-col justify-center px-px mt-4 rounded bg-zinc-300 max-md:pr-5">
                   <img
                     loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/36613dda2bd9d3e8dfce3118be4052265a66b78b8274ad4608cd9590176496d1?apiKey=2a09c3227636445ca6cca45824f0323c&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/36613dda2bd9d3e8dfce3118be4052265a66b78b8274ad4608cd9590176496d1?apiKey=2a09c3227636445ca6cca45824f0323c&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/36613dda2bd9d3e8dfce3118be4052265a66b78b8274ad4608cd9590176496d1?apiKey=2a09c3227636445ca6cca45824f0323c&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/36613dda2bd9d3e8dfce3118be4052265a66b78b8274ad4608cd9590176496d1?apiKey=2a09c3227636445ca6cca45824f0323c&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/36613dda2bd9d3e8dfce3118be4052265a66b78b8274ad4608cd9590176496d1?apiKey=2a09c3227636445ca6cca45824f0323c&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/36613dda2bd9d3e8dfce3118be4052265a66b78b8274ad4608cd9590176496d1?apiKey=2a09c3227636445ca6cca45824f0323c&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/36613dda2bd9d3e8dfce3118be4052265a66b78b8274ad4608cd9590176496d1?apiKey=2a09c3227636445ca6cca45824f0323c&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/36613dda2bd9d3e8dfce3118be4052265a66b78b8274ad4608cd9590176496d1?apiKey=2a09c3227636445ca6cca45824f0323c&"
+                    srcSet="../36613dda2bd9d3e8dfce3118be4052265a66b78b8274ad4608cd9590176496d1.png"
                     className="w-full aspect-[1.72]"
                   />
                 </div>
