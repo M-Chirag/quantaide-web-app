@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Module1Complete() {
   return (
     <div className="flex flex-col pb-20 bg-white">   
@@ -41,9 +43,13 @@ export default function Module1Complete() {
                   Now that we have created our problem statement, we must
                   justify why this problem matters.
                 </div>
-                <div className="justify-center self-center px-10 py-2.5 mt-7 font-bold text-white whitespace-nowrap bg-amber-500 rounded-md max-md:px-5">
-                  Start
-                </div>
+                <Link href={"../module2/stage1"} passHref>
+                      <button
+                        
+                          className="justify-end self-end px-10 py-2.5 mr-14 mt-10 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
+                        Start</button>
+                        
+                    </Link>
               </div>
             </div>
             <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">

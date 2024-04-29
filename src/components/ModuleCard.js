@@ -1,3 +1,4 @@
+import Link from 'next/link';
 const ModuleCard = ({ moduleNumber, title, summary, mainTile, imageSrc }) => {
   
   if (moduleNumber !== mainTile)
@@ -42,10 +43,12 @@ const ModuleCard = ({ moduleNumber, title, summary, mainTile, imageSrc }) => {
       />
       <div className="mt-6 text-xl font-bold">{title}</div>
       <div className="mt-3.5">{summary}</div>
+      
+      <div className="flex justify-center"><Link href="/module1/stage1">
       <button  
         className="justify-center self-center px-10 py-2.5 mt-8 font-bold text-white whitespace-nowrap bg-amber-500 rounded-md max-md:px-5 cursor-pointer">
         Start
-      </button>
+      </button></Link></div>
     </div>
   );
 };

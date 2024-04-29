@@ -19,7 +19,7 @@ export default function Home() {
       
       <div className="flex md:flex-row h-full mt-10 overflow-hidden">
       <div className="w-1/5"></div> 
-      <div className="w-1/5"> 
+      <div className="w-2/5"> 
                             <div className="flex flex-col mr-3/5">
                             
                                               <ModuleCard 
@@ -39,14 +39,14 @@ export default function Home() {
                     title="Justification"
                     summary="Justify why this problem matters."
                     mainTile = {1}
-                    imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/d533dab53b43aa726d7f5c4d0ba523d255f7861d546f842e687cfdfae944d48c?apiKey=2a09c3227636445ca6cca45824f0323c&width=400"
+                    imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3?apiKey=2a09c3227636445ca6cca45824f0323c&"
                   />
                   <ModuleCard 
                     moduleNumber={3}
                     title="Argument"
                     summary="Argue what might resolve your problem with clarity."
                     mainTile = {1}
-                    imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/d533dab53b43aa726d7f5c4d0ba523d255f7861d546f842e687cfdfae944d48c?apiKey=2a09c3227636445ca6cca45824f0323c&width=400"
+                    imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3?apiKey=2a09c3227636445ca6cca45824f0323c&"
                   />
                   <ModuleCard 
                     moduleNumber={4}
@@ -71,14 +71,14 @@ export default function Home() {
                     imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/d533dab53b43aa726d7f5c4d0ba523d255f7861d546f842e687cfdfae944d48c?apiKey=2a09c3227636445ca6cca45824f0323c&width=400"
                   />
                   <ModuleCard 
-                    moduleNumber={5}
+                    moduleNumber={7}
                     title="Hypothesis Formulation"
                     summary="Build testable hypotheses to predict a relationship between variables."
                     mainTile = {1}
                     imageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/d533dab53b43aa726d7f5c4d0ba523d255f7861d546f842e687cfdfae944d48c?apiKey=2a09c3227636445ca6cca45824f0323c&width=400"
                   />
                   <ModuleCard 
-                    moduleNumber={6}
+                    moduleNumber={8}
                     title="Question Formulation"
                     summary="Create your survey."
                     mainTile = {1}
@@ -92,7 +92,7 @@ export default function Home() {
         <div className="w-1/5"></div> 
         
       </div>
-      <div className="h-90 mb-96"></div>
+      <div className="h-10 mb-75"></div>
       </div>
   );
 }
