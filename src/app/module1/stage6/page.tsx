@@ -7,16 +7,7 @@ import { AICard } from '../AICard';
 import Link from 'next/link';
 import { Sidebar, SidebarItem } from '../Sidebar'; 
 import { data } from 'autoprefixer';
-
-
-
-// Define the AssessmentResult type outside of your component
-type AssessmentResult = {
-  score: number;
-  text1: string;
-  text2: string;
-  text3: string;
-};
+import ApiService, { AssessmentResult } from '@/app/ApiService';
 
 // Define the score mappings outside the function since they do not depend on component scope
 const scoreMappings: { [key: number]: { text: string; color: string } } = {
@@ -42,7 +33,6 @@ export default function Stage6() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
-    
     try {
       // Simulated fetch response
       const data: AssessmentResult = {
@@ -51,12 +41,14 @@ export default function Stage6() {
         text2: "Another response text for the second card.",
         text3: "Further response text for the third card.",
       };
-      
+      // const formData = new FormData(event.currentTarget); // entire form data is captured here
+      // const data = await ApiService.postFormData('https://us-central1-encoded-antenna-362401.cloudfunctions.net/python-http-function', formData);
       setIsLoading(false);
       setAssessmentResult(data);
     } catch (error) {
-      setIsLoading(false);
       console.error(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
