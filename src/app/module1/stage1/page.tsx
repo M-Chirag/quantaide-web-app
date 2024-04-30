@@ -102,7 +102,7 @@ function Stage1() {
           </div>
         </div>
         
-        <Sidebar>
+        <Sidebar moduleNumber={"1"}>
   <SidebarItem number="1" text="Choose your Interest" active={true} stageNumber = "1" href="/module1/stage1" />
   <SidebarItem number="2" text="What goes into problem statement?" stageNumber = "1" active={false} href="/module1/stage2" />
   <SidebarItem number="3" text="Conducting ‘problem-based’ deductive research" stageNumber = "1" active={false} href="/module1/stage3" />

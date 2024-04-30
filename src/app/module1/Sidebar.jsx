@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const SidebarContext = createContext(null);
 
-export function Sidebar({ children }) {
+export function Sidebar({ moduleNumber, children }) {
   const [expanded, setExpanded] = useState(true);
 
   return (
@@ -22,13 +22,13 @@ export function Sidebar({ children }) {
               >
                 {expanded ? <ChevronLast /> : <ChevronFirst />}
               </button>
-              
+
               <span
                 className={`transition-all text-lg font-sans ml-2 ${
                   expanded ? 'block' : 'hidden'
                 }`}
               >
-                Module 1
+                Module {moduleNumber}
               </span>
             </div>
             <span
@@ -39,7 +39,6 @@ export function Sidebar({ children }) {
               Your Progress
             </span>
           </div>
-      
         </div>
 
         <SidebarContext.Provider value={{ expanded }}>
