@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ModuleCard from '../components/ModuleCard';
+import Link from "next/link";
 // import { Sidebar,SidebarItem } from './module1/Sidebar'; 
 // import { HomeIcon, SettingsIcon, LayoutDashboard  } from "lucide-react";
 export default function Home() {
@@ -63,13 +64,13 @@ export default function Home() {
                     mainTile = {1}
                     imageSrc="hypothesis_formpng.png"
                   />
-                  <ModuleCard 
+                  <Link href="/module6/stage1"><ModuleCard 
                     moduleNumber={6}
                     title="Question Formulation"
                     summary="Create your survey."
                     mainTile = {1}
                     imageSrc="question_formulation.png"
-                  />
+                  /></Link>
                   <ModuleCard 
                     moduleNumber={7}
                     title="Hypothesis Formulation"

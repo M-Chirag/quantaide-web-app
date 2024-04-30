@@ -58,9 +58,10 @@ export default function Stage2() {
         </div>
         <div className="gap-0 mt-1 leading-7 max-md:flex-wrap max-md:max-w-full">
           Only 2 primary responses are possible
-          <br />
-          True/False
-          <br /> Yes/No
+          <ul className="list-disc pl-5 mt-1">
+          <li>True/False</li>
+                          <li> Yes/No</li>
+                          </ul>
         </div>
       </div>
       <div className="flex flex-col gap-1 justify-center p-6 mt-4 w-full text-base leading-7 text-black bg-white rounded-lg border border-gray-200 border-solid max-md:flex-wrap max-md:px-5 max-md:max-w-full">
@@ -83,10 +84,11 @@ export default function Stage2() {
         </div>
         <div className="gap-0 mt-1 leading-7 max-md:flex-wrap max-md:max-w-full">
           Numbers imply an underlying ordered structure
-          <br />
-          Likert-style questions <br />
-          Education level <br />
-          Income brackets{" "}
+          <ul className="list-disc pl-5 mt-1">
+        <li>Likert-style questions</li>
+        <li>Education level</li>
+        <li>Income brackets</li>
+    </ul>
         </div>
       </div>
       <div className="flex flex-col gap-1 justify-center p-6 mt-4 w-full text-base text-black bg-white rounded-lg border border-gray-200 border-solid max-md:flex-wrap max-md:px-5 max-md:max-w-full">
@@ -99,7 +101,7 @@ export default function Stage2() {
         <div className="gap-0 mt-1 leading-7 max-md:flex-wrap max-md:max-w-full">
           Semantic Differential scales
           <br />
-          Scale items{" "}
+          <ul className="list-disc pl-5 mt-1"><li>Scale items</li></ul>
         </div>
       </div>
       <div className="gap-0 mt-14 w-full text-base leading-7 text-black max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
