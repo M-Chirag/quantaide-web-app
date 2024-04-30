@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { HomeIcon, SettingsIcon, LayoutDashboard  } from "lucide-react";
 import { Img } from '@builder.io/react';
 
-export default function Stage2() {
+export default function Stage4() {
   return (
     <div className="w-full max-w-[1301px] ml-14 mr-14">
       <div className="flex flex-row max-md:flex-col max-md:gap-50">
@@ -28,7 +28,7 @@ export default function Stage2() {
                 <div className="flex flex-col grow shrink-0 justify-end px-5 basis-0 w-fit">
                   <div className="text-xs">Question Formulation</div>
                   <div className="mt-1 text-xl font-bold">
-                    Let's create a survey
+                    Let&apos;s create a survey
                   </div>
                 </div>
               </div>
@@ -36,8 +36,8 @@ export default function Stage2() {
                 <div className="justify-center font-semibold px-6 py-6 leading-7 bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full">
                   When building a survey, it might be a good idea to decide what kind of demographic data you want to collect. In the next section you can start building your survey that will help you gather data to test your hypothesis. 
                                       </div>
-                                      
-            <div className="flex flex-col justify-center p-6 w-full bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full">
+        <form action="">                            
+            <div className="flex mt-8 flex-col justify-center p-6 w-full bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full">
         <div className="justify-center leading-7 text-black max-md:max-w-full">
           You are curious about how much a person listens to music per day.
           Create a survey question for this using interval data.
@@ -139,9 +139,19 @@ export default function Stage2() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-                    
+        </div>  
+                                          </div>
+                                          
+                                          <div className="flex justify-end">
+                    <Link href={"../module6/stage2"} passHref>
+                      <button
+                        
+                          className="justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
+                        Done</button>
+                        
+                      </Link>
+                    </div>
+              </form>      
             
         </div>
                 
