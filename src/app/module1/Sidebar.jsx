@@ -16,13 +16,13 @@ export function Sidebar({ children }) {
             className={`flex flex-col ${expanded ? 'space-y-2' : 'space-y-0'}`}
           >
             <div className='flex items-center'>
-              <PanelLeft
-                className={`shrink-0 transition-all ${
-                  expanded
-                    ? 'w-10 h-10 border rounded-full p-2 bg-gray-100 border-gray-100'
-                    : 'w-0 h-0'
-                }`}
-              />
+              <button
+                onClick={() => setExpanded((curr) => !curr)}
+                className='p-1.5 rounded-lg bg-gray-50 hover:bg-amber-500'
+              >
+                {expanded ? <ChevronLast /> : <ChevronFirst />}
+              </button>
+              
               <span
                 className={`transition-all text-lg font-sans ml-2 ${
                   expanded ? 'block' : 'hidden'
@@ -39,12 +39,7 @@ export function Sidebar({ children }) {
               Your Progress
             </span>
           </div>
-          <button
-            onClick={() => setExpanded((curr) => !curr)}
-            className='p-1.5 rounded-lg bg-gray-50 hover:bg-amber-500'
-          >
-            {expanded ? <ChevronLast /> : <ChevronFirst />}
-          </button>
+      
         </div>
 
         <SidebarContext.Provider value={{ expanded }}>

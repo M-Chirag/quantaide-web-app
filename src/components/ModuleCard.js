@@ -29,7 +29,7 @@ const ModuleCard = ({ moduleNumber, title, summary, mainTile, imageSrc }) => {
   };
   return (
     <div className={`flex flex-col h-65 w-4/6
-                    px-9 py-10 mt-0 ml-3 
+                    px-9 py-10 mt-0 ml-3 mr-3
                     max-w-full 
                     text-base text-black bg-white rounded-2xl 
                     border border-gray-300 

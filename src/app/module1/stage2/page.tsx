@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Sidebar, SidebarItem } from '../Sidebar'; 
 import Link from 'next/link';
 import { HomeIcon, SettingsIcon, LayoutDashboard  } from "lucide-react";
+import { Img } from '@builder.io/react';
 
 export default function Stage2() {
   return (
@@ -43,7 +44,9 @@ export default function Stage2() {
                 <div className="mt-10 max-md:max-w-full">
                   Typical research design process:{" "}
                 </div>
-                <div className="shrink-0 mt-4 h-80 rounded-lg bg-neutral-100 max-md:max-w-full" />
+                    
+                    <img src="../Group 5.png" alt="Descriptive Alt Text" className="max-w-full h-auto rounded-lg border-2 border-gray-300" />
+                  </div>
                 <div className="flex justify-end">
                     <Link href={"../module1/stage3"} passHref>
                       <button
@@ -51,8 +54,9 @@ export default function Stage2() {
                           className="justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10">
                         Next</button>
                         
-                    </Link></div>
-              </div>
+                      </Link>
+                    </div>
+              
             </div>
           </div>
         </div>

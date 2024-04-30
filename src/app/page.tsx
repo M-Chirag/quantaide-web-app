@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <div className="flex flex-col w-screen h-screen overflow-hidden">
                     <div className="flex flex-row justify-center">
-                      <div className="w-1/5"> </div>
+
                         <div className="flex flex-col w-2/5">
                             <div className="ml-9 item-center font-bold text-2xl relative top-0 left-10"> Welcome! </div>
                             <div className="ml-9 item-center text-xl relative top-0 left-10">
-                            Join us as guide your through the process of survey design in our comprehensive modules. 
+                            Join us as we guide you through the process of survey design in our comprehensive modules. 
                             </div>
                         </div>
                       <div className="w-1/5 text-center pl-80">6 Modules</div>
@@ -18,9 +18,9 @@ export default function Home() {
                     </div>
       
       <div className="flex md:flex-row h-full mt-10 overflow-hidden">
-      <div className="w-1/5"></div> 
-      <div className="w-2/5"> 
-                            <div className="flex flex-col mr-3/5">
+      <div className="w-1/6"></div> 
+      <div className="w-3/5"> 
+                            <div className="flex flex-col ">
                             
                                               <ModuleCard 
                                                 moduleNumber={1}
@@ -31,7 +31,7 @@ export default function Home() {
                                               /> 
                             </div>
         </div>
-        <div className="w-1/5"></div> 
+        
         <div className="flex flex-col align-top w-1/10">
         <div className="flex flex-col h-full w-full" style={{ overflowY: 'auto' }}>
                   <ModuleCard 
