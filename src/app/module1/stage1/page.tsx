@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 
 import Link from 'next/link';
 import { Sidebar, SidebarItem } from '../Sidebar';
+import { FileUploader } from '../FileUploader';
+
 import {
   PanelLeft,
   Clipboard,
@@ -88,6 +90,7 @@ function Stage1() {
                           src='../7ea439422e8e5f5968afdc3d38dc703980a26ef5e7fd8df5b16115fdb9b57632.svg'
                           className='shrink-0 self-end mt-40 aspect-square w-[43px] max-md:mt-10'
                         />
+                        <FileUploader />
                       </div>
 
                       <div className='flex justify-end'>
