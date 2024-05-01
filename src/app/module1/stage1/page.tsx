@@ -43,7 +43,7 @@ function Stage1() {
                       </div>
                     </div>
                     <div className='flex flex-col pl-16 mt-11 max-md:pl-5 max-md:mt-10 max-md:max-w-full'>
-                      <div className='flex gap-2 max-md:flex-wrap'>
+                      <div className='flex flex-row gap-2 max-md:flex-wrap'>
                         <div className='flex flex-col flex-wrap grow shrink-0 justify-center content-end basis-0 w-fit max-md:max-w-full'>
                           <div className='flex flex-col justify-center max-md:max-w-full'>
                             <div className='flex flex-col max-md:max-w-full'>
@@ -85,12 +85,7 @@ function Stage1() {
                             </div>
                           </div>
                         </div>
-                        <img
-                          loading='lazy'
-                          src='../7ea439422e8e5f5968afdc3d38dc703980a26ef5e7fd8df5b16115fdb9b57632.svg'
-                          className='shrink-0 self-end mt-40 aspect-square w-[43px] max-md:mt-10'
-                        />
-                        <FileUploader />
+                        <FileUploader iconSource="../7ea439422e8e5f5968afdc3d38dc703980a26ef5e7fd8df5b16115fdb9b57632.svg" />
                       </div>
 
                       <div className='flex justify-end'>
