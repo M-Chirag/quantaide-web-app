@@ -1,4 +1,4 @@
-// components/FileUploader.js
+
 import { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
@@ -31,7 +31,7 @@ const FileUploader = () => {
       {isDragActive ? (
         <p>Drop the file here ...</p>
       ) : (
-        <p>Drag 'n' drop a file here, or click to select a file</p>
+        <p>Drag &apos; n &apos; drop a file here, or click to select a file</p>
       )}
       {uploadedFile && <p>File uploaded: {uploadedFile.filename}</p>}
     </div>

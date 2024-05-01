@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import Link from 'next/link';
 import { Sidebar, SidebarItem } from '../Sidebar';
-import { FileUploader } from '../FileUploader';
+import FileUploader from '../FileUploader';
 
 import {
   PanelLeft,
