@@ -5,10 +5,13 @@ export type AssessmentResult = {
   text3: string;
 };
 
-const postFormData = async (path: string, formData: FormData): Promise<AssessmentResult> => {
+const postFormData = async (
+  path: string,
+  formData: FormData
+): Promise<AssessmentResult> => {
   const response = await fetch(path, {
     method: 'POST',
-    body: formData
+    body: formData,
   });
 
   if (!response.ok) {
@@ -19,5 +22,5 @@ const postFormData = async (path: string, formData: FormData): Promise<Assessmen
 };
 
 export default {
-  postFormData
+  postFormData,
 };
