@@ -36,20 +36,24 @@ export default function Stage3() {
                   <div className='flex flex-col pl-16 mt-11 text-base max-md:pl-5 max-md:mt-10 max-md:max-w-full'>
                     <div className='justify-center px-6 py-6 leading-7 bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full'>
                       For quantitative research, we are starting with a problem
-                      and not conducting exploratory research where we look for
-                      interesting trends.{' '}
-                      <p className='font-semibold'>
-                        Note that the problem is NOT a question.
-                      </p>
-                      It is a statement that gets to the heart of an issue that
-                      we will then argue is important to further understand.
-                      These problems come from a wide range of areas such as
-                      data science, UX, finance, healthcare, education,
-                      business, etc
+                      and not conducting{' '}
+                      <a
+                        target='_blank'
+                        href='https://research-methodology.net/research-methodology/research-design/exploratory-research/'
+                        className='underline'
+                      >
+                        exploratory research
+                      </a>{' '}
+                      where we look for interesting trends. Note that the
+                      problem is NOT a question. It is a statement that gets to
+                      the heart of an issue that we will then argue is important
+                      to further understand. These problems come from a wide
+                      range of areas such as data science, UX, finance,
+                      healthcare, education, business, etc.
                     </div>
 
                     <div className='flex gap-5 mt-7 p-4 bg-white rounded-lg border border-gray-200 border-solid max-md:flex-wrap'>
-                      <div className='flex gap-0 justify-center items-center px-2 py-2 bg-amber-500 rounded-md h-[45px] w-[45px]'>
+                      <div className='flex gap-0 justify-center items-center px-2 py-2 bg-amber-500 rounded-md h-[39px] w-[39px]'>
                         <img
                           loading='lazy'
                           src='https://cdn.builder.io/api/v1/image/assets/TEMP/cc06fddba394dd106c0cce3f0a1a6a49d7afe7ca3f0b08eecf043950d3ca5f7e?apiKey=2a09c3227636445ca6cca45824f0323c&'
