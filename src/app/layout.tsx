@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <div className='h-full w-full'>
-          <div className='flex md:flex-col pb-20'>
+          <div className='flex md:flex-col mb-10'>
             <div className='flex md:flex-col justify-center items-start px-10 py-5 w-full text-4xl text-amber-500 max-md:px-5 max-md:max-w-full'>
               <Link href='/'>
                 <div className='flex gap-0.2'>
