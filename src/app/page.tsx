@@ -17,7 +17,7 @@ export default function Home() {
                     Join us as we guide you through the process of survey design in our comprehensive modules.
                   </div>
 
-                <div className='w-3/6 mt-10'>
+                <div className='w-4/6 mt-10'>
                 <ModuleCard
                     moduleNumber={1}
                     title='Problem Statement 1'
