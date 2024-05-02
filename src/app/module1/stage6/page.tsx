@@ -29,7 +29,17 @@ export default function Stage6() {
     2: true,
     3: true,
   });
-
+  function handleTryagain(event: React.MouseEvent<HTMLButtonElement>){
+    event.preventDefault();
+    setAssessmentResult(null);
+    setCardsVisibility({
+      ...cardsVisibility, 
+      1: true,
+      2: true,
+      3: true,
+    });
+  };
+  
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
@@ -141,9 +151,40 @@ export default function Stage6() {
                     />
                   ))}
                 </div>
-                <div className='flex flex-row justify-left w-4/7 h-1/3 px-3.5 py-3.5 mt-2 text-base rounded-lg border border-solid border-zinc-300 text-black resize-vertical'>
-                  {body}
-                </div>
+                <div className='flex flex-col w-4/5'>
+                
+                <textarea
+                  value={body}
+                  onChange={(e) => setBody(e.target.value)}
+                  className='justify-center px-3.5 py-3.5 mt-2 text-base rounded-lg border border-solid border-zinc-300 text-black resize-vertical'
+                  
+                />
+
+                {(<div className='flex justify-end'>
+               
+              <button
+                type='button'
+                onClick={handleTryagain}
+                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+              >
+                Evaluate again?
+                
+              </button>
+              
+              <Link href={'../module1/complete'} passHref>
+              <button
+                type='submit'
+                disabled={isLoading}
+                className='px-10 py-2.5 ml-4 mt-4 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+              >
+                {'Finalize'}
+                
+              </button>  
+              </Link>      
+                  
+       
+            </div>)}
+            </div>
               </div>
               {/* The 3 AI responses will be displayed here. */}
               <div className='flex flex-col w-1/3'>
@@ -167,24 +208,7 @@ export default function Stage6() {
             </div>
 
             {/* Finalize button */}
-            <div className='flex flex-row justify-end mt-10 gap-2'>
-            <button
-                type='submit'
-                disabled={isLoading}
-                className='px-6 py-2.5 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
-              >
-                {isLoading ? 'Submitting...' : assessmentResult ? 'Re - evaluate' : 'Evaluate'}
-                
-              </button>
-              <Link href={'../module1/complete'} passHref>
-                <button
-                  type='submit'
-                  className='px-6 py-2.5 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
-                >
-                  Finalize
-                </button>
-              </Link>
-            </div>
+            
           </div>
 
 
@@ -257,32 +281,30 @@ export default function Stage6() {
             <div className='mt-1 text-xl font-bold'>Let’s get hands on!</div>
           </div>
           <form onSubmit={handleSubmit}>
+            <div className='flex flex-col w-3/5'>
             <div className='mt-12 text-base font-bold text-black'>
               Write your own problem statement below
             </div>
             <textarea
               value={body}
               onChange={(e) => setBody(e.target.value)}
-              className='justify-center w-full px-3.5 py-3.5 mt-2 text-base rounded-lg border border-solid border-zinc-300 text-black resize-vertical'
+              className='justify-center px-3.5 py-3.5 mt-2 text-base rounded-lg border border-solid border-zinc-300 text-black resize-vertical'
               placeholder='Problem statement goes here...'
               rows={6}
             />
-            <div className='flex gap-2 justify-end mt-10'>
-            {/* <button
-                type='submit'
-                disabled={isLoading}
-                className='px-6 py-2.5 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
-              >
-                {isLoading ? 'Submitting...' : assessmentResult ? 'Re - evaluate' : 'Evaluate'}
-                
-              </button> */}
+            {(<div className='flex justify-end'>
               <button
                 type='submit'
                 disabled={isLoading}
-                className='px-6 py-2.5 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
               >
-                {isLoading && !assessmentResult ? 'Submitting...' : 'Evaluate'}
+                {isLoading ? 'Submitting...' : 'Evaluate with AI'}
+                
               </button>
+                   
+                  
+       
+            </div>)}
             </div>
           </form>
         </div>
