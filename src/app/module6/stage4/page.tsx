@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 import { Sidebar, SidebarItem } from '../../module1/Sidebar';
 import Link from 'next/link';
 import { HomeIcon, Star,SettingsIcon, LayoutDashboard } from 'lucide-react';
@@ -22,19 +22,23 @@ export default function Stage4() {
 
   const [isLoading, setIsLoading] = useState(false);
   const [assessmentResult, setAssessmentResult] = useState<any>(null);
-
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
     try{
-    const formData = new FormData(event.target);
+    const formElement = event.currentTarget as HTMLFormElement;
+    const formData = new FormData(formElement);
+    const formDataEntries = Array.from(formData.entries());
 
-    const formDataJson = {};
+    const formDataJson: { [key: string]: FormDataEntryValue } = {};
     // Iterate over form data entries
+    try {
     for (const [key, value] of formData.entries()) {
       // Add each form data entry to the JSON object
       formDataJson[key] = value;
-    }
+    }}
+    catch (err){console.log(err);}
 
     // Convert the JSON object to a string
     const formDataJsonString = JSON.stringify(formDataJson);
@@ -359,7 +363,7 @@ export default function Stage4() {
                       </div>}
                     </div>
                   </div>
-                  {assessmentResult && <div className='ml-20 mt-5 text-2xl font-bold'> Survey Evaluation ->
+                  {assessmentResult && <div className='ml-20 mt-5 text-2xl font-bold'> Survey Evaluation - `{'>'}`
                     </div>}
                   <div className='flex flex-col pl-16 mt-15 text-base max-md:pl-5 max-md:mt-10 max-md:max-w-full'>
                     { (<div className='mt-4 justify-center font-semibold px-6 py-6 leading-7 bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full'>
