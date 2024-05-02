@@ -47,7 +47,7 @@ export default function Stage6() {
       formdata.append("instruction", "Take this question/body text from the user and generate 3 suggestions in JSON format only in the format of {'score': <some random score in intefer from 1 to 5>, 'text1: <suggestion as text>, 'text2': : <suggestion as text>, 'text3': <suggestion as text>}.");
 
       console.log(formdata);
-      const requestOptions = {
+      const requestOptions: RequestInit = {
         method: "POST",
         body: formdata,
         redirect: "follow"
