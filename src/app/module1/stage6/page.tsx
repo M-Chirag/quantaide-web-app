@@ -23,8 +23,7 @@ export default function Stage6() {
   const router = useRouter();
   const [body, setBody] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [assessmentResult, setAssessmentResult] =
-    useState<AssessmentResult | null>(null);
+  const [assessmentResult, setAssessmentResult] = useState<AssessmentResult | null>(null);
   const [cardsVisibility, setCardsVisibility] = useState({
     1: true,
     2: true,
@@ -36,16 +35,46 @@ export default function Stage6() {
     setIsLoading(true);
     try {
       // Simulated fetch response
-      const data: AssessmentResult = {
-        score: 4,
-        text1: 'The response text that you want to display in the first card.',
-        text2: 'Another response text for the second card.',
-        text3: 'Further response text for the third card.',
+      // const data: AssessmentResult = {
+      //   score: 4,
+      //   text1: 'The response text that you want to display in the first card.',
+      //   text2: 'Another response text for the second card.',
+      //   text3: 'Further response text for the third card.',
+      // };
+
+      const formdata = new FormData();
+      formdata.append("question", body);
+      formdata.append("instruction", "Take this question/body text from the user and generate 3 suggestions in JSON format only in the format of {'score': <some random score in intefer from 1 to 5>, 'text1: <suggestion as text>, 'text2': : <suggestion as text>, 'text3': <suggestion as text>}.");
+
+      console.log(formdata);
+      const requestOptions = {
+        method: "POST",
+        body: formdata,
+        redirect: "follow"
       };
+
+
       // const formData = new FormData(event.currentTarget); // entire form data is captured here
-      // const data = await ApiService.postFormData('https://us-central1-encoded-antenna-362401.cloudfunctions.net/python-http-function', formData);
+      const response = await fetch('https://us-central1-encoded-antenna-362401.cloudfunctions.net/python-http-function', requestOptions);
+      const responseGPT = await response.text()
+
+      try {
+        const parsedData = JSON.parse(responseGPT);
+        const data: AssessmentResult = {
+          score: JSON.parse(JSON.parse(parsedData.body)).score,
+          text1: JSON.parse(JSON.parse(parsedData.body)).text1,
+          text2: JSON.parse(JSON.parse(parsedData.body)).text2,
+          text3: JSON.parse(JSON.parse(parsedData.body)).text3,
+        };
+        setAssessmentResult(data);
+        console.log(data);
+
+      } catch (error) {
+        console.error('Error parsing JSON:', error);
+      }
+
       setIsLoading(false);
-      setAssessmentResult(data);
+      
     } catch (error) {
       console.error(error);
     } finally {
