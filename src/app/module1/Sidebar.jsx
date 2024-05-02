@@ -5,12 +5,12 @@ import Link from 'next/link';
 
 const SidebarContext = createContext(null);
 
+
 export function Sidebar({ moduleNumber, children }) {
   const [expanded, setExpanded] = useState(true);
-
   return (
-    <aside className='h-screen fixed right-1'>
-      <nav className='h-full flex flex-col bg-white border-r shadow-sm'>
+    <aside className={`h-screen fixed right-1 rounded-md border-l-2 border-t-2 ${expanded ? '' : 'hover:bg-amber-500'}`}>
+      <nav className='h-full flex flex-col border-r shadow-sm'>
         <div className='p-4 flex justify-between items-start'>
           <div
             className={`flex flex-col ${expanded ? 'space-y-2' : 'space-y-0'}`}
@@ -38,30 +38,34 @@ export function Sidebar({ moduleNumber, children }) {
             >
               Your Progress
             </span>
+            
           </div>
+          
         </div>
-
+        
         <SidebarContext.Provider value={{ expanded }}>
           <ul className='flex-1 px-3'>{children}</ul>
         </SidebarContext.Provider>
+      
       </nav>
+      
     </aside>
   );
 }
 
 export function SidebarItem({ number, text, active, stageNumber, href }) {
   const { expanded } = useContext(SidebarContext);
-
   return (
     <Link href={href} passHref>
       <li
         className={`relative flex py-2 px-3 my-3 rounded-md cursor-pointer transition-colors group ${
-          active
-            ? 'font-bold text-gray-900 border border-gray-900'
-            : ' border border-gray-200 text-black hover:bg-gray-200 hover:text-gray-700'
+          expanded
+            ? active ? 'font-bold text-gray-900 border border-gray-900'
+            : ' border border-gray-100 text-black hover:bg-gray-200 hover:text-gray-700'
+            : ''
         }`}
       >
-        {/* {icon} */}
+        
 
         <span
           className={`${
