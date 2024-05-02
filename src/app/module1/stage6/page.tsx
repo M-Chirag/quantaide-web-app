@@ -44,8 +44,7 @@ export default function Stage6() {
 
       const formdata = new FormData();
       formdata.append("question", body);
-      formdata.append("instruction", "Take this question/body text from the user and generate 3 suggestions in JSON format only in the format of {'score': <some random score in intefer from 1 to 5>, 'text1: <suggestion as text>, 'text2': : <suggestion as text>, 'text3': <suggestion as text>}.");
-
+      formdata.append("instruction", "Take this question/body text from the user and generate 3 suggestions in JSON format only in the format of {'score': <0 if the question is not grammatically correct. 0 if the question has less than 4 words. 1 if the question is incomplete logically. Else, use cosine similarity to give the question a score. Compare the question to the following sentences to calculate the similarity score and scale it from 1 to 5. sentence 1 : 'Rising mental health problems in the United States have become a significant health concern with various factors contributing to it.', sentence 2: 'The escalating prevalence of mental health issues in the United States has emerged as a pressing public health challenge, influenced by multiple contributing factors.', sentence 3: 'Increasing mental health issues across the United States pose a substantial public health dilemma, driven by a range of influencing factors.', sentence 4: 'The surge in mental health challenges within the United States represents a major health crisis, influenced by a multitude of contributing factors.', sentence 5: 'Elevated rates of mental health difficulties within the United States are now a prominent health issue, influenced by various contributing factors.'>, 'text1: <suggestion as text>, 'text2': : <suggestion as text>, 'text3': <suggestion as text>}.");
       console.log(formdata);
       const requestOptions: RequestInit = {
         method: "POST",
@@ -168,17 +167,26 @@ export default function Stage6() {
             </div>
 
             {/* Finalize button */}
-            <div className='flex justify-end mt-10'>
+            <div className='flex flex-row justify-end mt-10 gap-2'>
+            <button
+                type='submit'
+                disabled={isLoading}
+                className='px-6 py-2.5 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+              >
+                {isLoading ? 'Submitting...' : assessmentResult ? 'Re - evaluate' : 'Evaluate'}
+                
+              </button>
               <Link href={'../module1/complete'} passHref>
                 <button
                   type='submit'
-                  className='px-10 py-2.5 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+                  className='px-6 py-2.5 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
                 >
                   Finalize
                 </button>
               </Link>
             </div>
           </div>
+
 
           <Sidebar moduleNumber={'1'}>
             <SidebarItem
@@ -259,13 +267,21 @@ export default function Stage6() {
               placeholder='Problem statement goes here...'
               rows={6}
             />
-            <div className='flex justify-end mt-10'>
+            <div className='flex gap-2 justify-end mt-10'>
+            {/* <button
+                type='submit'
+                disabled={isLoading}
+                className='px-6 py-2.5 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+              >
+                {isLoading ? 'Submitting...' : assessmentResult ? 'Re - evaluate' : 'Evaluate'}
+                
+              </button> */}
               <button
                 type='submit'
                 disabled={isLoading}
-                className='px-10 py-2.5 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+                className='px-6 py-2.5 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
               >
-                {isLoading ? 'Submitting...' : 'Done'}
+                {isLoading && !assessmentResult ? 'Submitting...' : 'Evaluate'}
               </button>
             </div>
           </form>
