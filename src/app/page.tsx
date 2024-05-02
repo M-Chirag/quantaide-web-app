@@ -5,39 +5,34 @@ import Link from 'next/link';
 // import { HomeIcon, SettingsIcon, LayoutDashboard  } from "lucide-react";
 export default function Home() {
   return (
-    <div className='flex flex-col w-screen h-screen overflow-hidden'>
-      <div className='flex flex-row justify-center'>
-        <div className='flex flex-col w-2/5'>
-          <div className='ml-9 item-center font-bold text-2xl relative top-0 left-10'>
-            {' '}
-            Welcome!{' '}
-          </div>
-          <div className='ml-9 item-center text-xl relative top-0 left-10'>
-            Join us as we guide you through the process of survey design in our
-            comprehensive modules.
-          </div>
-        </div>
-        <div className='w-1/5 text-center pl-80'>6 Modules</div>
-        <div className='w-1/5 '> </div>
-      </div>
+    <div className='flex md:flex-row justify-between'>
 
-      <div className='flex md:flex-row h-full mt-10 overflow-hidden'>
-        <div className='w-1/6'></div>
-        <div className='w-3/5'>
-          <div className='flex flex-col '>
-            <ModuleCard
-              moduleNumber={1}
-              title='Problem Statement 1'
-              summary='Summarize the content for your study.'
-              mainTile={1}
-              imageSrc='problem_statement.png'
-            />
-          </div>
-        </div>
+            <div className='w-1/6'></div>
+            <div className='flex flex-col w-4/5'>
+                <div className='font-bold text-2xl'>
+                        {' '}
+                        Welcome!{' '}
+                      </div>
+                <div className='item-center text-xl'>
+                    Join us as we guide you through the process of survey design in our comprehensive modules.
+                  </div>
 
-        <div className='flex flex-col align-top w-1/10'>
-          <div
-            className='flex flex-col h-full w-full'
+                <div className='w-3/6 mt-10'>
+                <ModuleCard
+                    moduleNumber={1}
+                    title='Problem Statement 1'
+                    summary='Summarize the content for your study.'
+                    mainTile={1}
+                    imageSrc='problem_statement.png'
+                  />
+                  </div>
+            </div>
+
+        <div className='flex flex-col mt-6 justify-start w-3/5'>
+          <div className='text-end'> </div>
+          <div className='text-end mb-10'> 6 modules. </div>
+        <div
+            className='flex flex-col mt-6 h-2/5'
             style={{ overflowY: 'auto' }}
           >
             <ModuleCard
@@ -93,11 +88,11 @@ export default function Home() {
               imageSrc='question_formulation.png'
             />
           </div>
-        </div>
-
-        <div className='w-1/5'></div>
+        
+        
       </div>
-      <div className='h-10 mb-75'></div>
+      <div className='w-1/6'> </div>
+
     </div>
   );
 }
