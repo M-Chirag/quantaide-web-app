@@ -9,11 +9,11 @@ export default function Home() {
 
             <div className='w-1/6'></div>
             <div className='flex flex-col w-4/5'>
-                <div className='font-bold text-2xl'>
+                <div className='font-bold text-2xl ml-3'>
                         {' '}
                         Welcome!{' '}
                       </div>
-                <div className='item-center text-xl'>
+                <div className='item-center text-xl ml-3'>
                     Join us as we guide you through the process of survey design in our comprehensive modules.
                   </div>
 
@@ -30,7 +30,7 @@ export default function Home() {
 
         <div className='flex flex-col mt-6 justify-start w-3/5'>
           <div className='text-end'> </div>
-          <div className='text-end mb-10'> 6 modules. </div>
+          <div className='text-end mb-10 mr-4'> 6 modules. </div>
         <div
             className='flex flex-col mt-6 h-2/5'
             style={{ overflowY: 'auto' }}
