@@ -24,7 +24,7 @@ function Stage1() {
             <div className='self-center w-full max-w-[1372px] max-md:max-w-full'>
               <div className='flex gap-5 max-md:flex-col max-md:gap-0'>
                 <div className='flex flex-col w-[67%] max-md:ml-0 max-md:w-full'>
-                  <div className='flex flex-col mt-9 max-md:mt-10 max-md:max-w-full'>
+                  <div className='flex flex-col mt-20 max-md:mt-10 max-md:max-w-full'>
                     <div className='flex gap-5 justify-between self-start text-black'>
                       <Link href='/'>
                         <button>

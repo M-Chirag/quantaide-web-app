@@ -20,15 +20,17 @@ export default function RootLayout({
           <div className='flex md:flex-col mb-10'>
             <div className='flex md:flex-col justify-center items-start px-10 w-full text-4xl text-amber-500 max-md:px-5 max-md:max-w-full'>
               <Link href='/'>
-                <div className='flex gap-0.2'>
-                  <img
-                    loading='lazy'
-                    src='../Logo_final.png'
-                    className='shrink-0 self-start object-contain w-[120px] h-[42px] mt-2.5'
-                    alt='Logo'
-                  />
+                <nav style={{ position: 'fixed', top: '0', left: '0', width: '100%', padding: '10px 32px', alignItems: 'center', gap: '16px', background: '#FEFEFE', boxShadow: '4px 0px 12px 0px rgba(0, 0, 0, 0.10)' }}>
+                  <div className='flex gap-0.2'>
+                    <img
+                      loading='lazy'
+                      src='../Logo_final.png'
+                      className='shrink-0 self-start object-contain w-[120px] h-[42px] mt-2.5'
+                      alt='Logo'
+                    />
                   {/* <div className='justify-center py-2 mt-n1'>uantaide</div> */}
-                </div>
+                  </div>
+                </nav>
               </Link>
             </div>
           </div>
