@@ -41,14 +41,14 @@ export default function Stage2() {
                       problem and do not conduct exploratory research where we
                       look for interesting trends.
                     </div>
-                    <div className='mt-10 max-md:max-w-full'>
+                    <div className='mt-10 max-md:max-w-full pb-4'>
                       Typical research design process:{' '}
                     </div>
 
                     <img
                       src='../Group 5.png'
                       alt='Descriptive Alt Text'
-                      className='max-w-full h-auto rounded-lg border-2 border-gray-300'
+                      className='max-w-full h-auto rounded-lg border border-gray-200 px-6 py-6'
                     />
                   </div>
                   <div className='flex justify-end'>
