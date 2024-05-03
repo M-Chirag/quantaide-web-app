@@ -20,7 +20,7 @@ export default function RootLayout({
           <div className='flex md:flex-col mb-10'>
             <div className='flex md:flex-col justify-center items-start px-10 w-full text-4xl text-amber-500 max-md:px-5 max-md:max-w-full'>
               <Link href='/'>
-                <nav style={{ position: 'fixed', top: '0', left: '0', width: '100%', padding: '10px 32px', alignItems: 'center', gap: '16px', background: '#FEFEFE', boxShadow: '4px 0px 12px 0px rgba(0, 0, 0, 0.10)' }}>
+                <nav style={{ position: 'fixed', zIndex: '1', top: '0', left: '0', width: '100%', padding: '10px 32px', alignItems: 'center', gap: '16px', background: '#FEFEFE', boxShadow: '4px 0px 12px 0px rgba(0, 0, 0, 0.10)' }}>
                   <div className='flex gap-0.2'>
                     <img
                       loading='lazy'
