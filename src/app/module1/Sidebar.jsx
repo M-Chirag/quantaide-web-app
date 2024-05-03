@@ -18,7 +18,7 @@ export function Sidebar({ moduleNumber, children }) {
             <div className='flex items-center'>
               <button
                 onClick={() => setExpanded((curr) => !curr)}
-                className='p-1.5 rounded-lg bg-gray-50 hover:bg-amber-500'
+                className='p-1.5 rounded-lg bg-gray-50 hover:bg-gray-200'
               >
                 {expanded ? <ChevronLast /> : <ChevronFirst />}
               </button>
