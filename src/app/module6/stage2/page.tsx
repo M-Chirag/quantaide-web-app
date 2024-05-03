@@ -14,7 +14,7 @@ export default function Stage2() {
       <div className="self-center w-full max-w-[1372px] max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-[69%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col mt-9 text-black max-md:mt-10 max-md:max-w-full">
+            <div className="flex flex-col mt-20 text-black max-md:mt-10 max-md:max-w-full">
               <div className="flex gap-5 self-start">
                 <Link href="/module6/stage1">
                       <button>
