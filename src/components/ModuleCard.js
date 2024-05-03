@@ -3,8 +3,8 @@ const ModuleCard = ({ moduleNumber, title, summary, mainTile, imageSrc }) => {
   if (moduleNumber !== mainTile) {
     return (
       <div
-        className={`flex flex-col h-50 w-105
-                      px-6 py-6 mt-4 ml-4 mr-4 
+        className={`flex flex-col 
+                      px-6 py-6 mt-4 
                       max-w-full 
                       text-base text-black bg-white rounded-2xl 
                       border border-gray-300 
@@ -28,8 +28,8 @@ const ModuleCard = ({ moduleNumber, title, summary, mainTile, imageSrc }) => {
   }
   return (
     <div
-      className={`flex flex-col h-65 w-4/6
-                    px-9 py-10 mt-0 ml-3 mr-3
+      className={`flex flex-col 
+                    px-9 py-10
                     max-w-full 
                     text-base text-black bg-white rounded-2xl 
                     border border-gray-300 
