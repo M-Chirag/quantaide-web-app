@@ -9,7 +9,7 @@ const SidebarContext = createContext(null);
 export function Sidebar({ moduleNumber, children }) {
   const [expanded, setExpanded] = useState(true);
   return (
-    <aside className={`h-screen fixed right-1 rounded-md border-l-2 border-t-2 ${expanded ? '' : 'hover:bg-amber-500'}`}>
+    <aside className={`h-screen fixed right-1 rounded-md bg-white border-l-2 border-t-2 ${expanded ? '' : 'hover:bg-amber-500'}`}>
       <nav className='h-full flex flex-col border-r shadow-sm'>
         <div className='p-4 flex justify-between items-start'>
           <div
