@@ -5,33 +5,49 @@ import Link from 'next/link';
 // import { HomeIcon, SettingsIcon, LayoutDashboard  } from "lucide-react";
 export default function Home() {
   return (
-    <div className='flex md:flex-row justify-between'>
+    <div>
+      <div className='bg-amber-500 text-white text-center p-1 mt-20'>
+        <p className='font-medium'>
+          🚧 We are currently in development. Only Modules 1 and 6 are available
+          now. Stay tuned for more updates!
+        </p>
+      </div>
+      <div className='flex md:flex-row justify-between'>
+        <div className='ml-40 flex flex-col w-4/5'>
+          <div className='font-bold text-2xl ml-3 mt-20'> Welcome! </div>
+          <div
+            className='flex items-center ml-3'
+            style={{
+              color: '#000',
+              fontFamily: 'Open Sans',
+              fontSize: '16px',
+              fontStyle: 'normal',
+              fontWeight: '400',
+              lineHeight: 'normal',
+            }}
+          >
+            Join us as we guide you through the process of survey design in our
+            comprehensive modules.
+          </div>
 
-            <div className='w-1/6'></div>
-            <div className='flex flex-col w-4/5'>
-                <div className='font-bold text-2xl ml-3 mt-20'>
-                        {' '}
-                        Welcome!{' '}
-                      </div>
-                <div className='flex items-center ml-3' style={{ color: '#000', fontFamily: 'Open Sans', fontSize: '16px', fontStyle: 'normal', fontWeight: '400', lineHeight: 'normal' }}>
-                    Join us as we guide you through the process of survey design in our comprehensive modules.
-                  </div>
-
-                <div className='w-4/6 mt-10'>
-                <ModuleCard
-                    moduleNumber={1}
-                    title='Problem Statement 1'
-                    summary='Summarize the content for your study.'
-                    mainTile={1}
-                    imageSrc='problem_statement.png'
-                  />
-                  </div>
-            </div>
+          <div
+            className='w-4/6 mt-10'
+            style={{ minWidth: '390px', maxWidth: '390px' }}
+          >
+            <ModuleCard
+              moduleNumber={1}
+              title='Problem Statement 1'
+              summary='Summarize the content for your study.'
+              mainTile={1}
+              imageSrc='problem_statement.png'
+            />
+          </div>
+        </div>
 
         <div className='flex flex-col mt-20 justify-start w-3/5'>
           <div className='text-end'> </div>
-          <div className='text-end mb-10 mr-4'> 6 modules. </div>
-        <div
+          <div className='text-end mb-10 mr-4 font-semibold'> 6 modules </div>
+          <div
             className='flex flex-col mt-10 h-2/5'
             style={{ overflowY: 'auto' }}
           >
@@ -73,26 +89,10 @@ export default function Home() {
                 imageSrc='question_formulation.png'
               />
             </Link>
-            <ModuleCard
-              moduleNumber={7}
-              title='Hypothesis Formulation'
-              summary='Build testable hypotheses to predict a relationship between variables.'
-              mainTile={1}
-              imageSrc='hypothesis_formpng.png'
-            />
-            <ModuleCard
-              moduleNumber={8}
-              title='Question Formulation'
-              summary='Create your survey.'
-              mainTile={1}
-              imageSrc='question_formulation.png'
-            />
           </div>
-        
-        
+        </div>
+        <div className='w-1/6'> </div>
       </div>
-      <div className='w-1/6'> </div>
-
     </div>
   );
 }
