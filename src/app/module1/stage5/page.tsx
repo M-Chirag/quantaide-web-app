@@ -44,7 +44,7 @@ export default function Stage3() {
                         </div>
                       </div>
                       <div className='flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full'>
-                        <div className='flex flex-col grow justify-center p-4 w-full text-base font-semibold text-black bg-white rounded border border-gray-200 border-solid max-md:mt-2'>
+                        <div className='flex flex-col grow  p-4 w-full text-base font-semibold text-black bg-white rounded border border-gray-200 border-solid max-md:mt-2'>
                           <div className='justify-center'>
                             Students are not crossing the roads carefully in
                             areas with road construction.
