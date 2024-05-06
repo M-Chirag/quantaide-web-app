@@ -36,7 +36,7 @@ export default function Home() {
           >
             <ModuleCard
               moduleNumber={1}
-              title='Problem Statement 1'
+              title='Problem Statement'
               summary='Summarize the content for your study.'
               mainTile={1}
               imageSrc='problem_statement.png'
