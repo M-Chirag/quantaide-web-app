@@ -13,7 +13,7 @@ export default function Home() {
         </p>
       </div>
       <div className='flex md:flex-row justify-between'>
-        <div className='ml-40 flex flex-col w-4/5'>
+        <div className='ml-40 flex flex-col w-4/5' style={{minWidth:'590px'}}>
           <div className='font-bold text-2xl ml-3 mt-20'> Welcome! </div>
           <div
             className='flex items-center ml-3'
@@ -44,12 +44,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='flex flex-col mt-20 justify-start w-3/5'>
+        <div className='flex flex-col mt-20 justify-start w-3/5' >
           <div className='text-end'> </div>
           <div className='text-end mb-10 mr-4 font-semibold'> 6 modules </div>
           <div
             className='flex flex-col mt-10 h-2/5'
-            style={{ overflowY: 'auto' }}
+            style={{ overflowY: 'auto', minWidth: '390px', maxWidth: '590px', maxHeight: '1100px'  }}
           >
             <ModuleCard
               moduleNumber={2}
