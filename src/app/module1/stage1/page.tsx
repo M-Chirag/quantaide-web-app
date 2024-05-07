@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import { Sidebar, SidebarItem } from '../Sidebar';
 import FileUploader from '../FileUploader';
@@ -16,6 +17,11 @@ import {
 } from 'lucide-react';
 
 function Stage1() {
+  const [fileName, setFileName] = useState('');
+  const handleFileNameChange = (name) => {
+    setFileName(name);
+  };
+
   const sidebarState = window.innerWidth <= 1600 ? false : true;
   return (
     <div className='w-full max-w-[1301px] ml-14 mr-14'>
@@ -43,7 +49,7 @@ function Stage1() {
                         </div>
                       </div>
                     </div>
-                    <div className='flex flex-col pl-16 mt-11 max-md:pl-5 max-md:mt-10 max-md:max-w-full'>
+                    <div className='flex flex-col ml-5 pl-16 mt-11 max-md:pl-5 max-md:mt-10 max-md:max-w-full'>
                       <div className='flex flex-row gap-2 max-md:flex-wrap'>
                         <div className='flex flex-col flex-wrap grow shrink-0 justify-center content-end basis-0 w-fit max-md:max-w-full'>
                           <div className='flex flex-col justify-center max-md:max-w-full'>
@@ -59,15 +65,15 @@ function Stage1() {
                                   this experience for you.{' '}
                                 </div>
                               </div>
-                              <div className='flex flex-col mt-10 max-md:max-w-full'>
-                                <div className='flex gap-1 self-start'>
+                              <div className='flex flex-col mt-5 max-md:max-w-full'>
+                                {/* <div className='flex gap-1 self-start'>
                                   <div className='flex justify-center items-center p-1'>
                                     <img
                                       loading='lazy'
                                       src='../19e29c3d7422a2d35231dcd1f0f8b39abcae4c62edf6a2ec7ec112706f7bf50e.svg'
                                       className='aspect-[1.04] fill-amber-500 w-[25px]'
                                     />
-                                  </div>
+                                  </div> 
                                   <div className='flex gap-2 text-base text-amber-500'>
                                     <div className='justify-center px-2 py-1 whitespace-nowrap bg-white rounded border border-amber-500 border-solid'>
                                       Music
@@ -76,25 +82,33 @@ function Stage1() {
                                       Mental Health
                                     </div>
                                   </div>
-                                </div>
+                                </div> */}
                                 <input
                                   type='text'
-                                  className='justify-center items-start px-3.5 py-3.5 mt-4 text-base rounded-lg border border-solid border-zinc-300 text-black max-md:pr-5 max-md:max-w-full'
+                                  className='justify-center items-start px-3.5 py-2.5 mt-4 text-base rounded-lg border border-solid border-zinc-300 text-black max-md:pr-5 max-md:max-w-full'
                                   placeholder='Type your interest here'
                                 />
                               </div>
                             </div>
                           </div>
                         </div>
-                        <FileUploader iconSource="../7ea439422e8e5f5968afdc3d38dc703980a26ef5e7fd8df5b16115fdb9b57632.svg" />
+                        <FileUploader onFileNameChange={handleFileNameChange}/>
+                        
                       </div>
 
-                      <div className='flex justify-end'>
+                      <div className='flex flex-row justify-between'>
+                        {!fileName && <div></div>}
+                        {fileName=="Server Error" && <div>Server Error. Refresh your session</div>}
+                        {fileName!="Server Error" && fileName && <div>
+                        <FontAwesomeIcon icon={faCheck} className=" mt-4 text-green-500 bg-green-200 p-2 rounded-full" />
+                           <span className='ml-2 mb-2'>{fileName}</span></div>}
+                        
                         <Link href={'../module1/stage2'} passHref>
-                          <button className='justify-center self-end px-10 py-2.5 mr-14 mt-10 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10'>
-                            Done
+                          <button className='items-end px-10 py-2.5 mt-8 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10' style={{ minWidth:'121px', maxWidth:'121px', minHeight:'48px', maxHeight:'48px'}}>
+                            Next
                           </button>
                         </Link>
+                        
                       </div>
                     </div>
                   </div>
