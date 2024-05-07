@@ -19,7 +19,7 @@ const scoreMappings: { [key: number]: { text: string; color: string } } = {
 
 
 export default function Stage4() {
-  const sidebarState = window.innerWidth <= 1600 ? false : true;
+  const sidebarState = typeof window !== 'undefined' && window.innerWidth <= 1600 ? false : true;
   const [isLoading, setIsLoading] = useState(false);
   const [assessmentResult, setAssessmentResult] = useState<any>(null);
   
