@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import ModuleCard from '../components/ModuleCard';
 
 export default function Module1Complete() {
   return (
