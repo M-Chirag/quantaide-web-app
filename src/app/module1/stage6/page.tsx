@@ -20,6 +20,7 @@ const scoreMappings: { [key: number]: { text: string; color: string } } = {
 };
 
 export default function Stage6() {
+  const sidebarState = window.innerWidth <= 1700 ? false : true;
   const router = useRouter();
   const [body, setBody] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -42,6 +43,7 @@ export default function Stage6() {
   
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    
     setIsLoading(true);
     try {
       // Simulated fetch response
@@ -51,7 +53,7 @@ export default function Stage6() {
       //   text2: 'Another response text for the second card.',
       //   text3: 'Further response text for the third card.',
       // };
-
+      
       const formdata = new FormData();
       formdata.append("question", body);
       formdata.append("instruction", "Take this question/body text from the user and generate 3 suggestions in JSON format only in the format of {'score': <0 if the question is not grammatically correct. 0 if the question has less than 4 words. 1 if the question is incomplete logically. Else, use cosine similarity to give the question a score. Compare the question to the following sentences to calculate the similarity score and scale it from 1 to 5. sentence 1 : 'Rising mental health problems in the United States have become a significant health concern with various factors contributing to it.', sentence 2: 'The escalating prevalence of mental health issues in the United States has emerged as a pressing public health challenge, influenced by multiple contributing factors.', sentence 3: 'Increasing mental health issues across the United States pose a substantial public health dilemma, driven by a range of influencing factors.', sentence 4: 'The surge in mental health challenges within the United States represents a major health crisis, influenced by a multitude of contributing factors.', sentence 5: 'Elevated rates of mental health difficulties within the United States are now a prominent health issue, influenced by various contributing factors.'>, 'text1: <suggestion as text>, 'text2': : <suggestion as text>, 'text3': <suggestion as text>}.");
@@ -112,9 +114,9 @@ export default function Stage6() {
     return (
       <div className='w-full max-w-[1301px] mx-14'>
         <div className='flex flex-row max-md:flex-col max-md:gap-50'>
-          <div className='flex-grow bg-white p-5'>
+          <div className='flex-grow bg-white mt-20'>
             <div className='flex gap-1 justify-between self-start text-black'>
-              <Link href='/module1/stage6'>
+              <Link href='/module1/stage5'>
                 <button>
                   <img
                     loading='lazy'
@@ -124,9 +126,9 @@ export default function Stage6() {
                 </button>
               </Link>
             </div>
-            <div className='flex flex-row'>
+            <div className='flex flex-row ml-20'>
               <div className='flex flex-col w-2/3'>
-                <div className='flex flex-col justify-end px-5'>
+                <div className='flex flex-col justify-end'>
                   <div className='text-xs'>Problem Statement</div>
                   <div className='mt-1 text-xl font-bold'>
                     Let’s get hands on!
@@ -151,13 +153,13 @@ export default function Stage6() {
                     />
                   ))}
                 </div>
-                <div className='flex flex-col w-4/5'>
+                <div className='flex flex-col w-full'>
                 
                 <textarea
                   value={body}
                   onChange={(e) => setBody(e.target.value)}
-                  className='justify-center px-3.5 py-3.5 mt-2 text-base rounded-lg border border-solid border-zinc-300 text-black resize-vertical'
-                  
+                  className='px-3.5 py-3.5 mt-2 text-base rounded-lg border border-solid border-zinc-300 text-black resize-vertical'
+                  style={{minHeight:'200px', minWidth:'650px'}}
                 />
 
                 {(<div className='flex justify-end'>
@@ -187,7 +189,7 @@ export default function Stage6() {
             </div>
               </div>
               {/* The 3 AI responses will be displayed here. */}
-              <div className='flex flex-col w-1/3'>
+              <div className='flex flex-col w-full'>
                 {Object.entries(cardsVisibility).map(
                   ([cardNumber, isVisible]) =>
                     isVisible && (
@@ -212,7 +214,7 @@ export default function Stage6() {
           </div>
 
 
-          <Sidebar moduleNumber={'1'}>
+          <Sidebar moduleNumber={'1'} expandedState= {sidebarState} >
             <SidebarItem
               number='1'
               text='Choose your Interest'
@@ -264,7 +266,7 @@ export default function Stage6() {
   return (
     <div className='w-full max-w-[1301px] mx-14'>
       <div className='flex flex-row max-md:flex-col max-md:gap-50'>
-        <div className='flex-grow bg-white p-5'>
+        <div className='flex-grow bg-white mt-20'>
           <div className='flex gap-1 justify-between self-start text-black'>
             <Link href='/module1/stage5'>
               <button>
@@ -276,12 +278,12 @@ export default function Stage6() {
               </button>
             </Link>
           </div>
-          <div className='flex flex-col justify-end px-5'>
+          <div className='flex flex-col justify-end  ml-20'>
             <div className='text-xs'>Problem Statement</div>
             <div className='mt-1 text-xl font-bold'>Let’s get hands on!</div>
           </div>
           <form onSubmit={handleSubmit}>
-            <div className='flex flex-col w-3/5'>
+            <div className='flex flex-col w-3/5  ml-20'>
             <div className='mt-12 text-base font-bold text-black'>
               Write your own problem statement below
             </div>
@@ -290,6 +292,7 @@ export default function Stage6() {
               onChange={(e) => setBody(e.target.value)}
               className='justify-center px-3.5 py-3.5 mt-2 text-base rounded-lg border border-solid border-zinc-300 text-black resize-vertical'
               placeholder='Problem statement goes here...'
+              style={{minHeight:'200px', minWidth:'650px'}}
               rows={6}
             />
             {(<div className='flex justify-end'>
@@ -308,7 +311,7 @@ export default function Stage6() {
             </div>
           </form>
         </div>
-        <Sidebar moduleNumber={'1'}>
+        <Sidebar moduleNumber={'1'} expandedState= {sidebarState}>
           <SidebarItem
             number='1'
             text='Choose your Interest'

@@ -6,8 +6,8 @@ import Link from 'next/link';
 const SidebarContext = createContext(null);
 
 
-export function Sidebar({ moduleNumber, children }) {
-  const [expanded, setExpanded] = useState(true);
+export function Sidebar({ moduleNumber, children, expandedState }) {
+  const [expanded, setExpanded] = useState(expandedState);
   return (
     <aside className={`h-screen fixed mt-8 z-0 right-0 bg-white border-l-0 border-t-0 shadow-md ${expanded ? '' : 'hover:bg-#C9C9C9'};`}>
       <nav className='h-full flex flex-col border-r shadow-sm'>

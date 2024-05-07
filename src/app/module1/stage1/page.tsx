@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 
 function Stage1() {
+  const sidebarState = window.innerWidth <= 1600 ? false : true;
   return (
     <div className='w-full max-w-[1301px] ml-14 mr-14'>
       <div className='w-full max-w-[1301px] ml-14 mr-14'>
@@ -102,7 +103,7 @@ function Stage1() {
             </div>
           </div>
 
-          <Sidebar moduleNumber={'1'}>
+          <Sidebar moduleNumber={'1'} expandedState={sidebarState}>
             <SidebarItem
               number='1'
               text='Choose your Interest'

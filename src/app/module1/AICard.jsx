@@ -4,7 +4,7 @@ import { CircleCheck, CircleX } from 'lucide-react';
 
 export function AICard({ cardNumber, text, onCheckClick, onCrossClick }) {
   return (
-    <div className='ml-20 mt-4 p-4 bg-white rounded-lg border border-amber-500 border-solid'>
+    <div className='ml-5 mt-4 p-4 bg-white rounded-lg border border-amber-500 border-solid ' style={{maxWidth:'470px'}}>
       <div className='flex flex-col flex-1 justify-center'>
         <div className='flex justify-center items-center self-start p-2'>
           <img
@@ -17,7 +17,7 @@ export function AICard({ cardNumber, text, onCheckClick, onCrossClick }) {
         <div className='justify-center text-base font-semibold leading-9 text-black'>
           AI Suggestion {cardNumber}
         </div>
-        <div className='mt-2 text-base leading-7 text-black'>{text}</div>
+        <div className='mt-2 text-base leading-7 text-black whitespace-normal'>{text}</div>
 
         <div className='flex gap-3 mt-3'>
           <button
