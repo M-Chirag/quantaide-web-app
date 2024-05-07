@@ -14,7 +14,6 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileNameChange }) => {
     const selectedFile = event.target.files?.[0];
     if (selectedFile) {
       setFile(selectedFile);
-      onFileNameChange(selectedFile.name);
     }
 
     setUploaded(false); // Reset uploaded state when a new file is selected

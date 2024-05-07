@@ -20,7 +20,7 @@ const scoreMappings: { [key: number]: { text: string; color: string } } = {
 };
 
 export default function Stage6() {
-  const sidebarState = window.innerWidth <= 1700 ? false : true;
+  const sidebarState = typeof window !== 'undefined' && window.innerWidth <= 1700 ? false : true;
   const router = useRouter();
   const [body, setBody] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -301,7 +301,7 @@ export default function Stage6() {
               <button
                 type='submit'
                 disabled={isLoading}
-                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-teal-00  rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-teal-500  rounded-md disabled:bg-amber-300'
               >
                 {isLoading ? 'Submitting...' : 'Evaluate with AI'}
                 
