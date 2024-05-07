@@ -590,7 +590,7 @@ export default function Stage4() {
                               ))}
                             </div>
                             <p className='text-gray-900'>
-                             {assessmentResult[3].feedback}
+                              {assessmentResult[3].feedback}
                             </p>
                           </div>
                         )}
@@ -651,13 +651,14 @@ export default function Stage4() {
                         </div>
                       </div>
                       <div className='flex flex-col items-end'>
-                       <div className='mt-4 text-sm text-gray-400'>If you don&apos;t wish to use AI, proceed to preview your survey. </div>
+                        <div className='mt-4 text-sm text-gray-400'>
+                          If you don&apos;t wish to use AI, proceed to preview
+                          your survey.{' '}
+                        </div>
                       </div>
                       {/* Submit button */}
                       {
-                       
                         <div className='flex justify-end mb-20'>
-                        
                           <button
                             type='submit'
                             disabled={isLoading}
@@ -669,7 +670,7 @@ export default function Stage4() {
                               ? 'Evaluate Again'
                               : 'Evaluate'}
                           </button>
-                          <Link href={'../module6/complete'} passHref>
+                          <Link href={'../module6/stage5'} passHref>
                             <button
                               type='submit'
                               disabled={isLoading}
