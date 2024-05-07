@@ -590,7 +590,7 @@ export default function Stage4() {
                               ))}
                             </div>
                             <p className='text-gray-900'>
-                              AI Feedback: {assessmentResult[3].feedback}
+                             {assessmentResult[3].feedback}
                             </p>
                           </div>
                         )}
