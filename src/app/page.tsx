@@ -46,7 +46,7 @@ export default function Home() {
 
         <div className='flex flex-col mt-20 justify-start items-end w-4/5' >
             <div className='text-end font-semibold'> 6 modules </div>
-            <div className='flex flex-col mt-20 h-2/5 border border-gray-200 p-1 rounded-md ' style={{ overflowY: 'auto', minWidth: '390px', maxWidth: '590px', maxHeight: '1300px', minHeight: '520px'  }}>
+            <div className='flex flex-col mt-20 h-2/5 shadow-md border-gray-200 p-1 rounded-md overflow-y-scroll' style={{ overflowY: 'scroll', minWidth: '390px', maxWidth: '590px', maxHeight: '1300px', minHeight: '520px', scrollbarWidth: 'thick', scrollbarColor: 'rgba(0, 0, 0, 0.5) transparent'  }}>
               <ModuleCard
                 moduleNumber={2}
                 title='Justification'
@@ -93,7 +93,7 @@ export default function Home() {
               fontStyle: 'italic',
               fontWeight: '400',
               lineHeight: 'normal',
-            }}>Scroll down for more modules</div>
+            }}>Scroll down</div>
         </div>
         <div className='w-1/6' style={{ minWidth: '150px' }}></div>
       </div>
