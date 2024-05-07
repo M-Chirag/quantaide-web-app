@@ -375,26 +375,9 @@ export default function Stage4() {
                     <form onSubmit={handleSubmit}>
                       {/* Question about music listening frequency  */}
                       <div className='flex mt-8 flex-col justify-center p-6 w-full bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full'>
-                      {(<div className='justify-center leading-7 text-black max-md:max-w-full'>
-                          1. You are curious about how much a person listens to
-                          music per day. Create a survey question for this using
-                          interval data.
-                        </div>)}
-
-                        
-                        <input 
-                          type='text' 
-                          name="q1_text"
-                          className='justify-center p-4 mt-3 bg-white rounded border border-solid border-neutral-400 border-opacity-50 leading-[162.5%] text-neutral-400 max-md:max-w-full'
-                          placeholder='Write your question'
-                        ></input>
-                        {assessmentResult && (
-                          <div className='mt-4 ml-2 flex flex-row gap-4'>
-                            <img
-                              loading='lazy'
-                              src='../19e29c3d7422a2d35231dcd1f0f8b39abcae4c62edf6a2ec7ec112706f7bf50e.svg'
-                              className='aspect-[1.04] fill-amber-500 w-[25px]'
-                            />
+                      {assessmentResult && (
+                          <div className=' ml-2 flex flex-row gap-4 mb-2 border-b-2 py-1'>
+                            
                             <div className='flex gap-1 items-center text-3xl font-bold tracking-wider '>
                                       {/* <div
                                         className={`px-4 py-3.5 rounded-md ${scoreMappings[assessmentResult[0].score]?.color}`}
@@ -410,13 +393,48 @@ export default function Stage4() {
                                         />
                                       ))}
                                     </div>
-                            <p className='text-gray-900'>AI Feedback: {assessmentResult[0].feedback}</p>
+                            <p className='text-gray-900'>{assessmentResult[0].feedback}</p>
                           </div>
                         )}
+                      {(<div className='justify-center leading-7 text-black max-md:max-w-full'>
+                          1. You are curious about how much a person listens to
+                          music per day. Create a survey question for this using
+                          interval data.
+                        </div>)}
+
+                        
+                        <input 
+                          type='text' 
+                          name="q1_text"
+                          className='justify-center p-4 mt-3 bg-white rounded border border-solid border-neutral-400 border-opacity-50 leading-[162.5%] text-neutral-400 max-md:max-w-full'
+                          placeholder='Write your question'
+                        ></input>
+                        
                       </div>
 
                       {/* Question about platforms used for listening to music --> */}
                       <div className='flex flex-col justify-center p-6 mt-6 w-full text-base bg-white rounded-lg border border-gray-200 border-solid text-neutral-400 max-md:px-5 max-md:max-w-full'>
+                      {assessmentResult && (
+                          <div className=' ml-2 flex flex-row gap-4 mb-2 border-b-2 py-1'>
+                            
+                            <div className='flex gap-1 items-center text-3xl font-bold tracking-wider '>
+                                      {/* <div
+                                        className={`px-4 py-3.5 rounded-md ${scoreMappings[assessmentResult[0].score]?.color}`}
+                                      >
+                                        {scoreMappings[assessmentResult[0].score]?.text}
+                                      </div> */}
+                                      {[...Array(5)].map((_, index) => (
+                                        <Star
+                                          key={index}
+                                          className={`my-auto ${
+                                            index < assessmentResult[0]["score"]? scoreMappings[assessmentResult[1].score]?.color : 'text-gray-300'
+                                          }`}
+                                        />
+                                      ))}
+                                    </div>
+                            <p className='text-gray-900'>{assessmentResult[1].feedback}</p>
+                          </div>
+                        )}
                         <div className='leading-5 text-black max-md:max-w-full'>
                           2. We are curious what platform a user most frequently
                           uses to listen to music. Create a survey question to
@@ -456,13 +474,14 @@ export default function Stage4() {
                             )
                           )}
                         </div>
-                        {assessmentResult && (
-                          <div className='mt-4 ml-2 flex flex-row gap-4'>
-                            <img
-                              loading='lazy'
-                              src='../19e29c3d7422a2d35231dcd1f0f8b39abcae4c62edf6a2ec7ec112706f7bf50e.svg'
-                              className='aspect-[1.04] fill-amber-500 w-[25px]'
-                            />
+                        
+                      </div>
+
+                      {/* <!-- Dichotomous question about playing instruments --> */}
+                      <div className='flex flex-col justify-center p-6 mt-6 w-full bg-white rounded-lg border border-gray-200 border-solid text-neutral-400 max-md:px-5 max-md:max-w-full'>
+                      {assessmentResult && (
+                          <div className='ml-2 flex flex-row gap-4 mb-2 border-b-2 py-1'>
+                            
                             <div className='flex gap-1 items-center text-3xl font-bold tracking-wider '>
                                       {/* <div
                                         className={`px-4 py-3.5 rounded-md ${scoreMappings[assessmentResult[0].score]?.color}`}
@@ -473,18 +492,14 @@ export default function Stage4() {
                                         <Star
                                           key={index}
                                           className={`my-auto ${
-                                            index < assessmentResult[1]["score"]? scoreMappings[assessmentResult[1].score]?.color : 'text-gray-300'
+                                            index < assessmentResult[2]["score"]? scoreMappings[assessmentResult[2].score]?.color : 'text-gray-300'
                                           }`}
                                         />
                                       ))}
                                     </div>
-                            <p className='text-gray-900'>AI Feedback: {assessmentResult[1].feedback}</p>
+                            <p className='text-gray-900'>{assessmentResult[2].feedback}</p>
                           </div>
                         )}
-                      </div>
-
-                      {/* <!-- Dichotomous question about playing instruments --> */}
-                      <div className='flex flex-col justify-center p-6 mt-6 w-full bg-white rounded-lg border border-gray-200 border-solid text-neutral-400 max-md:px-5 max-md:max-w-full'>
                         <div className='leading-7 text-black max-md:max-w-full'>
                           3. We are curious if users play instruments on a
                           regular basis. Create a question to ask the user this
@@ -519,13 +534,12 @@ export default function Stage4() {
                             </div>
                           ))}
                         </div>
-                        {assessmentResult && (
-                          <div className='mt-4 ml-2 flex flex-row gap-4'>
-                            <img
-                              loading='lazy'
-                              src='../19e29c3d7422a2d35231dcd1f0f8b39abcae4c62edf6a2ec7ec112706f7bf50e.svg'
-                              className='aspect-[1.04] fill-amber-500 w-[25px]'
-                            />
+                        
+                      </div>
+
+                      <div className='flex flex-col justify-center p-6 mt-6 w-full bg-white rounded-lg border border-gray-200 border-solid text-neutral-400 max-md:px-5 max-md:max-w-full'>
+                      {assessmentResult && (
+                          <div className='ml-2 flex flex-row gap-4 mb-2 border-b-2 py-1'>
                             <div className='flex gap-1 items-center text-3xl font-bold tracking-wider '>
                                       {/* <div
                                         className={`px-4 py-3.5 rounded-md ${scoreMappings[assessmentResult[0].score]?.color}`}
@@ -536,17 +550,14 @@ export default function Stage4() {
                                         <Star
                                           key={index}
                                           className={`my-auto ${
-                                            index < assessmentResult[2]["score"]? scoreMappings[assessmentResult[2].score]?.color : 'text-gray-300'
+                                            index < assessmentResult[3]["score"]? scoreMappings[assessmentResult[3].score]?.color : 'text-gray-300'
                                           }`}
                                         />
                                       ))}
                                     </div>
-                            <p className='text-gray-900'>AI Feedback: {assessmentResult[2].feedback}</p>
+                            <p className='text-gray-900'>AI Feedback: {assessmentResult[3].feedback}</p>
                           </div>
                         )}
-                      </div>
-
-                      <div className='flex flex-col justify-center p-6 mt-6 w-full bg-white rounded-lg border border-gray-200 border-solid text-neutral-400 max-md:px-5 max-md:max-w-full'>
                         <div className='justify-center leading-7 text-black max-md:max-w-full'>
                           4. We are curious about measuring anxiety levels.
                           Create a survey prompt to ask the person to rank their
@@ -602,31 +613,7 @@ export default function Stage4() {
                             </div>
                           </div>
                           
-                            {assessmentResult && (
-                          <div className='mt-4 ml-2 flex flex-row gap-4'>
-                            <img
-                              loading='lazy'
-                              src='../19e29c3d7422a2d35231dcd1f0f8b39abcae4c62edf6a2ec7ec112706f7bf50e.svg'
-                              className='aspect-[1.04] fill-amber-500 w-[25px]'
-                            />
-                            <div className='flex gap-1 items-center text-3xl font-bold tracking-wider '>
-                                      {/* <div
-                                        className={`px-4 py-3.5 rounded-md ${scoreMappings[assessmentResult[0].score]?.color}`}
-                                      >
-                                        {scoreMappings[assessmentResult[0].score]?.text}
-                                      </div> */}
-                                      {[...Array(5)].map((_, index) => (
-                                        <Star
-                                          key={index}
-                                          className={`my-auto ${
-                                            index < assessmentResult[3]["score"]? scoreMappings[assessmentResult[3].score]?.color : 'text-gray-300'
-                                          }`}
-                                        />
-                                      ))}
-                                    </div>
-                            <p className='text-gray-900'>AI Feedback: {assessmentResult[3].feedback}</p>
-                          </div>
-                        )}
+                            
                                               
                             
                         </div>
@@ -637,7 +624,7 @@ export default function Stage4() {
               <button
                 type='submit'
                 disabled={isLoading}
-                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-teal-500 opacity-4 rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-amber-500 border border-amber-500 opacity-4 rounded-md disabled:bg-amber-50'
               >
                 {isLoading ? 'Submitting...' : assessmentResult ? 'Re - evaluate' : 'Evaluate'}
                 

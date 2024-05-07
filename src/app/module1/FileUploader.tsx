@@ -64,7 +64,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileNameChange }) => {
         onChange={handleFileChange}
         style={{ display: 'none' }}
       />
-      <button disabled={uploaded || loading} onClick={handleIconClick} className="font-bold border border-solid border-2 border-amber-500 text-amber-500 rounded-md" style={{ minWidth: '121px', maxWidth: '121px', minHeight: '44px', maxHeight: '44px' }}>
+      <button disabled={uploaded || loading} onClick={handleIconClick} className="font-bold border border-solid border-2 border-amber-500 bg-amber-500 text-white rounded-md" style={{ minWidth: '121px', maxWidth: '121px', minHeight: '44px', maxHeight: '44px' }}>
         {loading ? (
           <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
           <div className="flex items-center">

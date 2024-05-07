@@ -169,28 +169,20 @@ export default function Stage6() {
               <button
                 type='button'
                 onClick={handleTryagain}
-                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-teal-500  rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-amber-500 border border-amber-500  rounded-md disabled:bg-amber-300'
               >
                 Evaluate again?
                 
               </button>
               
-              <Link href={'../module1/complete'} passHref>
-              <button
-                type='submit'
-                disabled={isLoading}
-                className='px-10 py-2.5 ml-4 mt-4 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
-              >
-                {'Finalize'}
-                
-              </button>  
-              </Link>      
+                 
                   
        
             </div>)}
             </div>
               </div>
               {/* The 3 AI responses will be displayed here. */}
+              <div className='flex flex-col items-end'>
               <div className='flex flex-col w-full'>
                 {Object.entries(cardsVisibility).map(
                   ([cardNumber, isVisible]) =>
@@ -209,6 +201,18 @@ export default function Stage6() {
                     )
                 )}
               </div>
+              <div className='mt-4 text-sm'>If you don`&apos;`t wish to proceed use AI, finalise your answer. </div>
+              <Link href={'../module1/complete'} passHref>
+              <button
+                type='submit'
+                disabled={isLoading}
+                className='px-10 py-2.5 ml-4 mt-4 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+              >
+                {'Finalise'}
+                
+              </button>  
+              </Link>  
+              </div> 
             </div>
 
             {/* Finalize button */}
@@ -301,7 +305,7 @@ export default function Stage6() {
               <button
                 type='submit'
                 disabled={isLoading}
-                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-teal-500  rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-amber-500 border border-amber-500 rounded-md disabled:bg-amber-300'
               >
                 {isLoading ? 'Submitting...' : 'Evaluate with AI'}
                 

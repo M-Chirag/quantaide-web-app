@@ -53,7 +53,7 @@ export default function Stage2() {
           <div className="flex flex-col gap-1 justify-center p-6 mt-3 w-full text-base text-black bg-white rounded-lg border border-gray-200 border-solid max-md:flex-wrap max-md:px-5 max-md:max-w-full">
             <div className="flex gap-2.5 justify-between px-px leading-[162.5%] max-md:flex-wrap max-md:max-w-full">
               <div className="gap-0 my-auto font-semibold">Dichotomous </div>
-              <div className="justify-center px-5 py-1 whitespace-nowrap rounded-full bg-neutral-200">
+              <div className="justify-center px-5 py-1 whitespace-nowrap rounded-full  bg-amber-500 opacity-14">
                 Categorical
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function Stage2() {
           <div className="flex flex-col gap-1 justify-center p-6 mt-4 w-full text-base leading-7 text-black bg-white rounded-lg border border-gray-200 border-solid max-md:flex-wrap max-md:px-5 max-md:max-w-full">
             <div className="flex gap-2.5 justify-between px-px max-md:flex-wrap max-md:max-w-full">
               <div className="gap-0 my-auto font-semibold">Nomimal </div>
-              <div className="justify-center px-5 py-1 whitespace-nowrap rounded-full bg-neutral-200">
+              <div className="justify-center px-5 py-1 whitespace-nowrap rounded-full bg-amber-500 opacity-14 ">
                 Categorical
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function Stage2() {
           <div className="flex flex-col gap-1 justify-center p-6 mt-4 w-full text-base text-black bg-white rounded-lg border border-gray-200 border-solid max-md:flex-wrap max-md:px-5 max-md:max-w-full">
             <div className="flex gap-2.5 justify-between px-px whitespace-nowrap leading-[162.5%] max-md:flex-wrap max-md:max-w-full">
               <div className="gap-0 my-auto font-semibold">Ordinal</div>
-              <div className="justify-center px-5 py-1 rounded-full bg-neutral-200">
+              <div className="justify-center px-5 py-1 rounded-full  bg-amber-500 opacity-14">
                 Categorical
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function Stage2() {
           <div className="flex flex-col gap-1 justify-center p-6 mt-4 w-full text-base text-black bg-white rounded-lg border border-gray-200 border-solid max-md:flex-wrap max-md:px-5 max-md:max-w-full">
             <div className="flex gap-2.5 justify-between px-px whitespace-nowrap leading-[162.5%] max-md:flex-wrap max-md:max-w-full">
               <div className="gap-0 my-auto font-semibold">Interval</div>
-              <div className="justify-center px-5 py-1 rounded-full bg-neutral-200">
+              <div className="justify-center px-5 py-1 rounded-full  bg-amber-500 opacity-14">
                 Semantic
               </div>
             </div>
