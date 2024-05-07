@@ -19,7 +19,7 @@ const scoreMappings: { [key: number]: { text: string; color: string } } = {
 
 
 export default function Stage4() {
-
+  const sidebarState = window.innerWidth <= 1600 ? false : true;
   const [isLoading, setIsLoading] = useState(false);
   const [assessmentResult, setAssessmentResult] = useState<any>(null);
   
@@ -363,7 +363,7 @@ export default function Stage4() {
                       </div>}
                     </div>
                   </div>
-                  {assessmentResult && <div className='ml-20 mt-5 text-2xl font-bold'> Survey Evaluation - `{'>'}`
+                  {assessmentResult && <div className='ml-20 mt-5 text-2xl font-bold'> Survey Evaluation -{'>'}
                     </div>}
                   <div className='flex flex-col pl-16 mt-15 text-base max-md:pl-5 max-md:mt-10 max-md:max-w-full'>
                     { (<div className='mt-4 justify-center font-semibold px-6 py-6 leading-7 bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full'>
@@ -410,7 +410,7 @@ export default function Stage4() {
                                         />
                                       ))}
                                     </div>
-                            <p>AI Feedback: {assessmentResult[0].feedback}</p>
+                            <p className='text-gray-900'>AI Feedback: {assessmentResult[0].feedback}</p>
                           </div>
                         )}
                       </div>
@@ -478,7 +478,7 @@ export default function Stage4() {
                                         />
                                       ))}
                                     </div>
-                            <p>AI Feedback: {assessmentResult[1].feedback}</p>
+                            <p className='text-gray-900'>AI Feedback: {assessmentResult[1].feedback}</p>
                           </div>
                         )}
                       </div>
@@ -541,7 +541,7 @@ export default function Stage4() {
                                         />
                                       ))}
                                     </div>
-                            <p>AI Feedback: {assessmentResult[2].feedback}</p>
+                            <p className='text-gray-900'>AI Feedback: {assessmentResult[2].feedback}</p>
                           </div>
                         )}
                       </div>
@@ -624,7 +624,7 @@ export default function Stage4() {
                                         />
                                       ))}
                                     </div>
-                            <p>AI Feedback: {assessmentResult[3].feedback}</p>
+                            <p className='text-gray-900'>AI Feedback: {assessmentResult[3].feedback}</p>
                           </div>
                         )}
                                               
@@ -637,7 +637,7 @@ export default function Stage4() {
               <button
                 type='submit'
                 disabled={isLoading}
-                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-teal-500 opacity-4 rounded-md disabled:bg-amber-300'
               >
                 {isLoading ? 'Submitting...' : assessmentResult ? 'Re - evaluate' : 'Evaluate'}
                 
@@ -648,7 +648,7 @@ export default function Stage4() {
                 disabled={isLoading}
                 className='px-10 py-2.5 ml-4 mt-4 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
               >
-                {'Finalize'}
+                {'Done'}
                 
               </button>  
               </Link>      
@@ -665,7 +665,7 @@ export default function Stage4() {
             </div>
           </div>
         </div>
-        <Sidebar moduleNumber={'6'}>
+        <Sidebar moduleNumber={'6'} expandedState= {sidebarState}>
           <SidebarItem
             number='1'
             text='Putting it all together'

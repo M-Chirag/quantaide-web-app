@@ -30,6 +30,8 @@ export default function Stage6() {
     2: true,
     3: true,
   });
+
+
   function handleTryagain(event: React.MouseEvent<HTMLButtonElement>){
     event.preventDefault();
     setAssessmentResult(null);
@@ -167,7 +169,7 @@ export default function Stage6() {
               <button
                 type='button'
                 onClick={handleTryagain}
-                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-teal-500  rounded-md disabled:bg-amber-300'
               >
                 Evaluate again?
                 
@@ -299,7 +301,7 @@ export default function Stage6() {
               <button
                 type='submit'
                 disabled={isLoading}
-                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white bg-teal-00  rounded-md disabled:bg-amber-300'
               >
                 {isLoading ? 'Submitting...' : 'Evaluate with AI'}
                 

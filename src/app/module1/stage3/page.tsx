@@ -54,11 +54,11 @@ export default function Stage3() {
                     </div>
 
                     <div className='flex gap-5 mt-7 p-4 bg-white rounded-lg border border-gray-200 border-solid max-md:flex-wrap'>
-                      <div className='flex gap-0 justify-center items-center px-2 py-2 bg-amber-500 rounded-md h-[45px] w-[45px]'>
+                      <div className='flex items-center p-2 mt-6 bg-amber-500 rounded-md h-[40px] w-[80px]'>
                         <img
                           loading='lazy'
                           src='https://cdn.builder.io/api/v1/image/assets/TEMP/cc06fddba394dd106c0cce3f0a1a6a49d7afe7ca3f0b08eecf043950d3ca5f7e?apiKey=2a09c3227636445ca6cca45824f0323c&'
-                          className='gap-0 w-full h-auto object-cover border-0 border-white border-solid aspect-[0.92] fill-white stroke-[0.2px] stroke-white'
+                          className='gap-0 '
                         />
                       </div>
                       <div className='gap-0 my-auto text-base font-semibold leading-7 text-black max-md:flex-wrap max-md:max-w-full'>

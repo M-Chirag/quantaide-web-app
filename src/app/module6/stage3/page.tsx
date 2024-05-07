@@ -7,6 +7,7 @@ import { HomeIcon, SettingsIcon, LayoutDashboard  } from "lucide-react";
 import { Img } from '@builder.io/react';
 
 export default function Stage2() {
+  const sidebarState = window.innerWidth <= 1600 ? false : true;
   return (
     <div className="w-full max-w-[1301px] ml-14 mr-14">
       <div className="flex flex-row max-md:flex-col max-md:gap-50">
@@ -120,8 +121,8 @@ export default function Stage2() {
         </div>
       </div>
     </div>
-    <Sidebar moduleNumber={"6"}>
-                  <SidebarItem number="1" text="Putting it all together" active={false} stageNumber={3} href="/module6/stage1" />
+    <Sidebar moduleNumber={"6"} expandedState= {sidebarState}>
+  <SidebarItem number="1" text="Putting it all together" active={false} stageNumber={3} href="/module6/stage1" />
   <SidebarItem number="2" text="Data collection through survey" active={false} stageNumber = {3} href="/module6/stage2" />
   <SidebarItem number="3" text="Formatting " active={true} stageNumber = {3} href="/module6/stage3" />
   <SidebarItem number="4" text="Let’s create questions" active={false} stageNumber = {3} href="/module6/stage4" />
