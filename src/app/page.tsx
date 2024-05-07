@@ -14,12 +14,12 @@ export default function Home() {
       </div>
       <div className='flex md:flex-row justify-between'>
         <div className='ml-40 flex flex-col w-4/5' style={{minWidth:'590px'}}>
-          <div className='font-bold text-2xl ml-3 mt-20'> Welcome! </div>
+          <div className='font-bold text-2xl ml-3 mt-20'> Dashboard! </div>
           <div
-            className='flex items-center ml-3'
+            className='flex items-center ml-3 mt-2'
             style={{
               color: '#000',
-              fontFamily: 'Open Sans',
+              fontFamily: 'Helvetica, sans-serif',
               fontSize: '16px',
               fontStyle: 'normal',
               fontWeight: '400',
@@ -40,58 +40,62 @@ export default function Home() {
               summary='Summarize the content for your study.'
               mainTile={1}
               imageSrc='problem_statement.png'
-            />
+            /> 
           </div>
         </div>
 
-        <div className='flex flex-col mt-20 justify-start w-3/5' >
-          <div className='text-end'> </div>
-          <div className='text-end mb-10 mr-4 font-semibold'> 6 modules </div>
-          <div
-            className='flex flex-col mt-10 h-2/5'
-            style={{ overflowY: 'auto', minWidth: '390px', maxWidth: '590px', maxHeight: '1100px'  }}
-          >
-            <ModuleCard
-              moduleNumber={2}
-              title='Justification'
-              summary='Justify why this problem matters.'
-              mainTile={1}
-              imageSrc='../27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3.png'
-            />
-            <ModuleCard
-              moduleNumber={3}
-              title='Argument'
-              summary='Argue what might resolve your problem with clarity.'
-              mainTile={1}
-              imageSrc='../d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3.png'
-            />
-            <ModuleCard
-              moduleNumber={4}
-              title='Research Question'
-              summary='Through questions, inquire relationships among variables.'
-              mainTile={1}
-              imageSrc='https://cdn.builder.io/api/v1/image/assets/TEMP/d533dab53b43aa726d7f5c4d0ba523d255f7861d546f842e687cfdfae944d48c?apiKey=2a09c3227636445ca6cca45824f0323c&width=400'
-            />
-
-            <ModuleCard
-              moduleNumber={5}
-              title='Hypothesis Formulation'
-              summary='Build testable hypotheses to predict a relationship between variables.'
-              mainTile={1}
-              imageSrc='hypothesis_formpng.png'
-            />
-            <Link href='/module6/stage1'>
+        <div className='flex flex-col mt-20 justify-start items-end w-4/5' >
+            <div className='text-end font-semibold'> 6 modules </div>
+            <div className='flex flex-col mt-20 h-2/5 border border-gray-200 p-1 rounded-md ' style={{ overflowY: 'auto', minWidth: '390px', maxWidth: '590px', maxHeight: '1300px', minHeight: '520px'  }}>
               <ModuleCard
-                moduleNumber={6}
-                title='Question Formulation'
-                summary='Create your survey.'
+                moduleNumber={2}
+                title='Justification'
+                summary='Justify why this problem matters.'
                 mainTile={1}
-                imageSrc='question_formulation.png'
+                imageSrc='../27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3.png'
               />
-            </Link>
-          </div>
+              <ModuleCard
+                moduleNumber={3}
+                title='Argument'
+                summary='Argue what might resolve your problem with clarity.'
+                mainTile={1}
+                imageSrc='../d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3.png'
+              />
+              <ModuleCard
+                moduleNumber={4}
+                title='Research Question'
+                summary='Through questions, inquire relationships among variables.'
+                mainTile={1}
+                imageSrc='https://cdn.builder.io/api/v1/image/assets/TEMP/d533dab53b43aa726d7f5c4d0ba523d255f7861d546f842e687cfdfae944d48c?apiKey=2a09c3227636445ca6cca45824f0323c&width=400'
+              />
+
+              <ModuleCard
+                moduleNumber={5}
+                title='Hypothesis Formulation'
+                summary='Build testable hypotheses to predict a relationship between variables.'
+                mainTile={1}
+                imageSrc='hypothesis_formpng.png'
+              />
+              <Link href='/module6/stage1'>
+                <ModuleCard
+                  moduleNumber={6}
+                  title='Question Formulation'
+                  summary='Create your survey.'
+                  mainTile={1}
+                  imageSrc='question_formulation.png'
+                />
+              </Link>
+            </div>
+            <div className='mt-2' style={{
+              color: '#000',
+              fontFamily: 'Helvetica, sans-serif',
+              fontSize: '16px',
+              fontStyle: 'italic',
+              fontWeight: '400',
+              lineHeight: 'normal',
+            }}>Scroll down for more modules</div>
         </div>
-        <div className='w-1/6'> </div>
+        <div className='w-1/6' style={{ minWidth: '150px' }}></div>
       </div>
     </div>
   );
