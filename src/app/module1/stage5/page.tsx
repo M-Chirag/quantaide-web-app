@@ -60,7 +60,7 @@ export default function Stage3() {
                     </div>
 
                     <div className='flex gap-5 mt-7 p-4 bg-white rounded-lg border border-gray-200 border-solid max-md:flex-wrap'>
-                      <div className='flex mt-4 gap-0 justify-center items-center px-2 py-2 bg-amber-500 rounded-md h-[40px] w-[45px]'>
+                      <div className='flex mt-4 gap-0 justify-center items-center px-2 py-2 bg-orange-400 rounded-md h-[40px] w-[45px]'>
                         <img
                           loading='lazy'
                           src='https://cdn.builder.io/api/v1/image/assets/TEMP/cc06fddba394dd106c0cce3f0a1a6a49d7afe7ca3f0b08eecf043950d3ca5f7e?apiKey=2a09c3227636445ca6cca45824f0323c&'
@@ -78,7 +78,7 @@ export default function Stage3() {
 
                   <div className='flex justify-end'>
                     <Link href={'../module1/stage6'} passHref>
-                      <button className='justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10'>
+                      <button className='justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-orange-400 rounded-md max-md:px-5 max-md:mt-10'>
                         Next
                       </button>
                     </Link>

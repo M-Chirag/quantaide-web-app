@@ -45,7 +45,7 @@ export default function Module1Complete() {
                   justify why this problem matters.
                 </div>
                 <Link href={'../module2/stage1'} passHref>
-                  <button className='ml-14 px-10 py-2.5 mt-10 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10'>
+                  <button className='ml-14 px-10 py-2.5 mt-10 text-base font-bold text-white bg-orange-400 rounded-md max-md:px-5 max-md:mt-10'>
                     Start
                   </button>
                 </Link>

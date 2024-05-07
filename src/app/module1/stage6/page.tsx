@@ -169,7 +169,7 @@ export default function Stage6() {
                                 <button
                                   type='button'
                                   onClick={handleTryagain}
-                                  className='px-10 py-2.5 mt-4 mb-20 text-base font-bold text-amber-500 border border-amber-500  rounded-md disabled:bg-amber-300'
+                                  className='px-10 py-2.5 mt-4 mb-20 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
                                 >
                                   Evaluate again? 
                                 </button>
@@ -194,12 +194,12 @@ export default function Stage6() {
                     )
                 )}
                 <div className='flex flex-col items-end'>
-              <div className='mt-4 text-sm text-gray-400'>If you don&apos;t wish to proceed use AI, finalise your answer. </div>
+              <div className='mt-4 text-sm text-gray-400'>If you don&apos;t wish to use AI, proceed to finalise your answer. </div>
               <Link href={'../module1/complete'} passHref>
               <button
                 type='submit'
                 disabled={isLoading}
-                className='px-10 py-2.5 ml-4 mt-4 mb-20 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 ml-4 mt-4 mb-20 text-base font-bold text-white bg-orange-400 rounded-md disabled:bg-orange-200'
               >
                 {'Finalise'}
                 
@@ -305,7 +305,7 @@ export default function Stage6() {
               <button
                 type='submit'
                 disabled={isLoading}
-                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold bg-amber-500 text-white border border-amber-500 rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold bg-orange-400 text-white  rounded-md disabled:bg-orange-200'
               >
                 {isLoading ? 'Submitting...' : 'Evaluate with AI'}
                 

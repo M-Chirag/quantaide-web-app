@@ -104,7 +104,7 @@ function Stage1() {
                            <span className='ml-2 mb-2'>{fileName}</span></div>}
                         
                         <Link href={'../module1/stage2'} passHref>
-                          <button className='items-end px-10 py-2.5 mt-8 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10' style={{ minWidth:'121px', maxWidth:'121px', minHeight:'48px', maxHeight:'48px'}}>
+                          <button className='items-end px-10 py-2.5 mt-8 text-base font-bold text-white bg-orange-400 rounded-md max-md:px-5 max-md:mt-10' style={{ minWidth:'121px', maxWidth:'121px', minHeight:'48px', maxHeight:'48px'}}>
                             Next
                           </button>
                         </Link>

@@ -650,28 +650,32 @@ export default function Stage4() {
                           </div>
                         </div>
                       </div>
-
+                      <div className='flex flex-col items-end'>
+                       <div className='mt-4 text-sm text-gray-400'>If you don&apos;t wish to use AI, proceed to preview your survey. </div>
+                      </div>
                       {/* Submit button */}
                       {
+                       
                         <div className='flex justify-end'>
+                        
                           <button
                             type='submit'
                             disabled={isLoading}
-                            className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-amber-500 border border-amber-500 opacity-4 rounded-md disabled:bg-amber-50'
+                            className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-white  bg-amber-500  rounded-md disabled:bg-amber-50'
                           >
                             {isLoading
                               ? 'Submitting...'
                               : assessmentResult
-                              ? 'Re - evaluate'
+                              ? 'Evaluate Again'
                               : 'Evaluate'}
                           </button>
                           <Link href={'../module6/complete'} passHref>
                             <button
                               type='submit'
                               disabled={isLoading}
-                              className='px-10 py-2.5 ml-4 mt-4 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+                              className='px-10 py-2.5 ml-4 mt-4 mb-4 text-base font-bold text-white bg-orange-400 rounded-md disabled:bg-orange-200'
                             >
-                              {'Done'}
+                              {'Preview'}
                             </button>
                           </Link>
                         </div>

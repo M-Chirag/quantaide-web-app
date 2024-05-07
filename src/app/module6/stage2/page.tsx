@@ -60,7 +60,7 @@ export default function Stage2() {
                         <div className='gap-0 my-auto font-semibold'>
                           Dichotomous{' '}
                         </div>
-                        <div className='justify-center px-5 py-1 whitespace-nowrap rounded-full  bg-amber-500 opacity-14'>
+                        <div className='justify-center px-5 py-1 whitespace-nowrap rounded-full  bg-orange-200 opacity-14'>
                           Categorical
                         </div>
                       </div>
@@ -77,7 +77,7 @@ export default function Stage2() {
                         <div className='gap-0 my-auto font-semibold'>
                           Nomimal{' '}
                         </div>
-                        <div className='justify-center px-5 py-1 whitespace-nowrap rounded-full bg-amber-500 opacity-14 '>
+                        <div className='justify-center px-5 py-1 whitespace-nowrap rounded-full bg-orange-200 opacity-14 '>
                           Categorical
                         </div>
                       </div>
@@ -90,7 +90,7 @@ export default function Stage2() {
                         <div className='gap-0 my-auto font-semibold'>
                           Ordinal
                         </div>
-                        <div className='justify-center px-5 py-1 rounded-full  bg-amber-500 opacity-14'>
+                        <div className='justify-center px-5 py-1 rounded-full  bg-orange-200 opacity-14'>
                           Categorical
                         </div>
                       </div>
@@ -108,7 +108,7 @@ export default function Stage2() {
                         <div className='gap-0 my-auto font-semibold'>
                           Interval
                         </div>
-                        <div className='justify-center px-5 py-1 rounded-full  bg-amber-500 opacity-14'>
+                        <div className='justify-center px-5 py-1 rounded-full  bg-orange-200 opacity-14'>
                           Semantic
                         </div>
                       </div>
@@ -144,7 +144,7 @@ export default function Stage2() {
                       <div className='flex flex-col gap-0 justify-center items-start p-4 mt-3 text-base leading-5 bg-white rounded border border-solid border-neutral-400 border-opacity-50 max-md:flex-wrap max-md:pr-5 max-md:max-w-full'>
                         <div className='flex flex-col gap-4 max-w-full w-[198px]'>
                           <div className='flex gap-1.5 '>
-                            <div className='shrink-0 gap-0 w-5 h-5 bg-amber-500 border-amber-500 border-solid shadow-sm border-[3px] rounded-[100px]' />
+                            <div className='shrink-0 gap-0 w-5 h-5 bg-orange-400 border-orange-400 border-solid shadow-sm border-[3px] rounded-[100px]' />
                             <div className='gap-0'>Email</div>
                           </div>
                           <div className='flex gap-1.5 mt-4'>
@@ -163,7 +163,7 @@ export default function Stage2() {
                       </div>
                     </div>
                     <div className='flex gap-5 p-4 mt-5 bg-white rounded-lg border border-gray-200 border-solid max-md:flex-wrap'>
-                      <div className='flex gap-0 justify-center items-center px-2 py-2 my-auto bg-amber-500 rounded-md h-[39px] w-[39px]'>
+                      <div className='flex gap-0 justify-center items-center px-2 py-2 my-auto bg-orange-400 rounded-md h-[39px] w-[39px]'>
                         <img
                           loading='lazy'
                           src='https://cdn.builder.io/api/v1/image/assets/TEMP/cc06fddba394dd106c0cce3f0a1a6a49d7afe7ca3f0b08eecf043950d3ca5f7e?apiKey=2a09c3227636445ca6cca45824f0323c&'
@@ -178,7 +178,7 @@ export default function Stage2() {
                   </div>
                   <div className='flex justify-end'>
                     <Link href={'../module6/stage3'} passHref>
-                      <button className='justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-amber-500 rounded-md max-md:px-5 max-md:mt-10'>
+                      <button className='justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-orange-400 rounded-md max-md:px-5 max-md:mt-10'>
                         Next
                       </button>
                     </Link>

@@ -47,7 +47,7 @@ const ModuleCard = ({ moduleNumber, title, summary, mainTile, imageSrc }) => {
 
       <div className='flex justify-center'>
         <Link href='/module1/stage1'>
-          <button className='justify-center self-center px-10 py-2.5 mt-8 font-bold text-white whitespace-nowrap bg-amber-500 rounded-md max-md:px-5 cursor-pointer'>
+          <button className='justify-center self-center px-10 py-2.5 mt-8 font-bold text-white whitespace-nowrap bg-orange-400 rounded-md max-md:px-5 cursor-pointer'>
             Start
           </button>
         </Link>
