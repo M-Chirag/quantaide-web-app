@@ -18,7 +18,7 @@ import {
 
 function Stage1() {
   const [fileName, setFileName] = useState('');
-  const handleFileNameChange = (name) => {
+  const handleFileNameChange = (name: string) => {
     setFileName(name);
   };
 

@@ -1,15 +1,22 @@
 import React, { useState, useRef } from 'react';
+interface FileUploaderProps {
+  onFileNameChange: (fileName: string) => void;
+}
 
-const FileUploader = ({ onFileNameChange }) => {
-  const [file, setFile] = useState(null);
+const FileUploader: React.FC<FileUploaderProps> = ({ onFileNameChange }) => {
+  const [file, setFile] = useState<File | null>(null); 
   const [loading, setLoading] = useState(false);
   const [uploaded, setUploaded] = useState(false);
-  const fileInputRef = useRef(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileChange = async (event) => {
+  const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.files);
-    const selectedFile = event.target.files[0];
-    setFile(selectedFile);
+    const selectedFile = event.target.files?.[0];
+    if (selectedFile) {
+      setFile(selectedFile);
+      onFileNameChange(selectedFile.name);
+    }
+
     setUploaded(false); // Reset uploaded state when a new file is selected
     setLoading(true); // Start loading immediately
 
@@ -20,7 +27,7 @@ const FileUploader = ({ onFileNameChange }) => {
     formdata.append("instruction", "Dont do anything.");
     formdata.append("file_data", selectedFile, selectedFile.name);
 
-    const requestOptions = {
+    const requestOptions: RequestInit = {
       method: "POST",
       body: formdata,
       redirect: "follow"
@@ -45,7 +52,9 @@ const FileUploader = ({ onFileNameChange }) => {
   };
 
   const handleIconClick = () => {
-    fileInputRef.current.click();
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
   };
 
   return (
