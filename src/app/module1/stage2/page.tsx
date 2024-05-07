@@ -52,7 +52,7 @@ export default function Stage2() {
                       className='max-w-full h-auto rounded-lg border border-gray-200 px-6 py-6'
                     />
                   </div>
-                  <div className='flex justify-end'>
+                  <div className='flex justify-end mb-40'>
                     <Link href={'../module1/stage3'} passHref>
                       <button className='justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-orange-400 rounded-md max-md:px-5 max-md:mt-10'>
                         Next
