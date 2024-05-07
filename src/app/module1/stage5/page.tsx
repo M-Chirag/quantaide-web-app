@@ -7,7 +7,7 @@ import { HomeIcon, SettingsIcon, LayoutDashboard } from 'lucide-react';
 import { Img } from '@builder.io/react';
 
 export default function Stage3() {
-  const sidebarState = window.innerWidth <= 1600 ? false : true;
+  // const sidebarState = typeof window !== 'undefined' && window.innerWidth <= 1600 ? false : true;
   return (
     <div className='w-full max-w-[1301px] ml-14 mr-14'>
       <div className='flex flex-row max-md:flex-col max-md:gap-50'>
@@ -88,7 +88,7 @@ export default function Stage3() {
             </div>
           </div>
         </div>
-        <Sidebar moduleNumber={'1'} expandedState={sidebarState}>
+        <Sidebar moduleNumber={'1'} expandedState={true}>
           <SidebarItem
             number='1'
             text='Choose your Interest'
