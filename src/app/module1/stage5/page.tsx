@@ -60,7 +60,7 @@ export default function Stage3() {
                     </div>
 
                     <div className='flex gap-5 mt-7 p-4 bg-white rounded-lg border border-gray-200 border-solid max-md:flex-wrap'>
-                      <div className='flex gap-0 justify-center items-center px-2 py-2 bg-amber-500 rounded-md h-[45px] w-[45px]'>
+                      <div className='flex mt-4 gap-0 justify-center items-center px-2 py-2 bg-amber-500 rounded-md h-[40px] w-[45px]'>
                         <img
                           loading='lazy'
                           src='https://cdn.builder.io/api/v1/image/assets/TEMP/cc06fddba394dd106c0cce3f0a1a6a49d7afe7ca3f0b08eecf043950d3ca5f7e?apiKey=2a09c3227636445ca6cca45824f0323c&'

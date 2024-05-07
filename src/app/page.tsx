@@ -46,7 +46,7 @@ export default function Home() {
 
         <div className='flex flex-col mt-20 justify-start items-end w-4/5' >
             <div className='text-end font-semibold'> 6 modules </div>
-            <div className='flex flex-col mt-20 h-2/5 shadow-md border-gray-200 p-1 rounded-md overflow-y-scroll' style={{ overflowY: 'scroll', minWidth: '390px', maxWidth: '590px', maxHeight: '1300px', minHeight: '520px', scrollbarWidth: 'thin', scrollbarColor: 'rgba(0, 0, 0, 0.5) transparent'  }}>
+            <div className='flex flex-col mt-20 h-2/5 p-1 rounded-md overflow-y-scroll' style={{ overflowY: 'scroll', minWidth: '390px', maxWidth: '590px', maxHeight: '1300px', minHeight: '520px', scrollbarWidth: 'thin', scrollbarColor: 'rgba(0, 0, 0, 0.5) transparent'  }}>
               <ModuleCard
                 moduleNumber={2}
                 title='Justification'
@@ -68,7 +68,6 @@ export default function Home() {
                 mainTile={1}
                 imageSrc='https://cdn.builder.io/api/v1/image/assets/TEMP/d533dab53b43aa726d7f5c4d0ba523d255f7861d546f842e687cfdfae944d48c?apiKey=2a09c3227636445ca6cca45824f0323c&width=400'
               />
-
               <ModuleCard
                 moduleNumber={5}
                 title='Hypothesis Formulation'
@@ -86,14 +85,6 @@ export default function Home() {
                 />
               </Link>
             </div>
-            <div className='mt-2' style={{
-              color: '#000',
-              fontFamily: 'Helvetica, sans-serif',
-              fontSize: '16px',
-              fontStyle: 'italic',
-              fontWeight: '400',
-              lineHeight: 'normal',
-            }}>Scroll down</div>
         </div>
         <div className='w-1/6' style={{ minWidth: '150px' }}></div>
       </div>

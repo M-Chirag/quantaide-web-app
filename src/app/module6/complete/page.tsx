@@ -25,8 +25,10 @@ export default function Module1Complete() {
         </div>
       </div>
       <Link href='/'>
-        <div className='justify-center self-center px-10 py-2.5 mt-12 text-base font-bold text-white whitespace-nowrap bg-amber-500 rounded-md max-md:px-5 max-md:mt-10'>
-          Save
+        <div className='flex justify-center'>
+          <div className='px-4 py-2 mt-12 text-base font-bold text-white whitespace-nowrap bg-amber-500 rounded-md max-md:px-5 max-md:mt-10' style={{maxWidth:'100px'}}>
+            Share
+          </div>
         </div>
       </Link>
     </div>

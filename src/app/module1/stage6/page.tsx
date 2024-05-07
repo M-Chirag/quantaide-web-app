@@ -129,7 +129,7 @@ export default function Stage6() {
               </Link>
             </div>
             <div className='flex flex-row ml-20'>
-              <div className='flex flex-col w-2/3'>
+              <div className='flex flex-col w-3/3'>
                 <div className='flex flex-col justify-end'>
                   <div className='text-xs'>Problem Statement</div>
                   <div className='mt-1 text-xl font-bold'>
@@ -155,35 +155,28 @@ export default function Stage6() {
                     />
                   ))}
                 </div>
-                <div className='flex flex-col w-full'>
-                
-                <textarea
-                  value={body}
-                  onChange={(e) => setBody(e.target.value)}
-                  className='px-3.5 py-3.5 mt-2 text-base rounded-lg border border-solid border-zinc-300 text-black resize-vertical'
-                  style={{minHeight:'200px', minWidth:'650px'}}
-                />
+                <div className='flex flex-row'>
+                <div className='flex flex-col w-full mb-20'>
+                        <textarea
+                          value={body}
+                          onChange={(e) => setBody(e.target.value)}
+                          className='px-3.5 py-3.5 mt-2 text-base rounded-lg border border-solid border-zinc-300 text-black resize-vertical'
+                          style={{minHeight:'200px', minWidth:'650px'}}
+                        />
 
-                {(<div className='flex justify-end'>
-               
-              <button
-                type='button'
-                onClick={handleTryagain}
-                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-amber-500 border border-amber-500  rounded-md disabled:bg-amber-300'
-              >
-                Evaluate again?
-                
-              </button>
-              
-                 
-                  
-       
-            </div>)}
+                                  {(<div className='flex justify-end'>
+                                
+                                <button
+                                  type='button'
+                                  onClick={handleTryagain}
+                                  className='px-10 py-2.5 mt-4 mb-20 text-base font-bold text-amber-500 border border-amber-500  rounded-md disabled:bg-amber-300'
+                                >
+                                  Evaluate again? 
+                                </button>
+                              </div>)}
             </div>
-              </div>
-              {/* The 3 AI responses will be displayed here. */}
-              <div className='flex flex-col items-end'>
-              <div className='flex flex-col w-full'>
+
+            <div className='flex flex-col w-full'>
                 {Object.entries(cardsVisibility).map(
                   ([cardNumber, isVisible]) =>
                     isVisible && (
@@ -200,13 +193,13 @@ export default function Stage6() {
                       />
                     )
                 )}
-              </div>
-              <div className='mt-4 text-sm'>If you don`&apos;`t wish to proceed use AI, finalise your answer. </div>
+                <div className='flex flex-col items-end'>
+              <div className='mt-4 text-sm text-gray-400'>If you don&apos;t wish to proceed use AI, finalise your answer. </div>
               <Link href={'../module1/complete'} passHref>
               <button
                 type='submit'
                 disabled={isLoading}
-                className='px-10 py-2.5 ml-4 mt-4 mb-4 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 ml-4 mt-4 mb-20 text-base font-bold text-white bg-amber-500 rounded-md disabled:bg-amber-300'
               >
                 {'Finalise'}
                 
@@ -214,6 +207,13 @@ export default function Stage6() {
               </Link>  
               </div> 
             </div>
+              </div>
+              
+
+            </div>
+              </div>
+              {/* The 3 AI responses will be displayed here. */}
+              
 
             {/* Finalize button */}
             
@@ -305,7 +305,7 @@ export default function Stage6() {
               <button
                 type='submit'
                 disabled={isLoading}
-                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold text-amber-500 border border-amber-500 rounded-md disabled:bg-amber-300'
+                className='px-10 py-2.5 mt-4 mb-4 text-base font-bold bg-amber-500 text-white border border-amber-500 rounded-md disabled:bg-amber-300'
               >
                 {isLoading ? 'Submitting...' : 'Evaluate with AI'}
                 
