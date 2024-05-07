@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ModuleCard from '../components/ModuleCard';
 
 export default function Module1Complete() {
   return (
@@ -32,58 +33,61 @@ export default function Module1Complete() {
         <div className='px-px mt-8 max-md:max-w-full'>
           <div className='flex gap-5 max-md:flex-col max-md:gap-0'>
             <div className='flex flex-col w-[33%] max-md:ml-0 max-md:w-full'>
-              <div className='flex flex-col grow py-7 pr-3 pl-6 w-full text-base text-black bg-white rounded border border-gray-200 border-solid max-md:pl-5 max-md:mt-9'>
+              <div className='flex flex-col grow py-7 pr-3 pl-6 w-full text-base text-black bg-white rounded-xl border border-gray-300 border-solid max-md:pl-5 max-md:mt-9'>
                 <div className='text-xs'>Module 2</div>
                 <img
                   loading='lazy'
                   srcSet='../27357dd94af2ca6a0cfe5e21d74c63bbc10df778c8d6b2357c707c2f3d9183d3.png'
-                  className='self-start mt-4 w-full aspect-[1.72]'
+                  className='self-start mt-4 w-[94%] aspect-[1.72]'
                 />
-                <div className='mt-5 text-xl font-bold'>Justification</div>
-                <div className='mt-4'>
+                <div className='mt-5 ml-2 text-xl font-bold'>Justification</div>
+                <div className='mt-4 ml-2 text-justify w-[90%]'>
                   Now that we have created our problem statement, we must
                   justify why this problem matters.
                 </div>
+                <div className='flex justify-center'>
                 <Link href={'../module2/stage1'} passHref>
-                  <button className='ml-14 px-10 py-2.5 mt-10 text-base font-bold text-white bg-orange-400 rounded-md max-md:px-5 max-md:mt-10'>
+                  <button className='text-justify px-10 py-2.5 mt-10 text-base font-bold text-white bg-orange-400 rounded-md max-md:px-5 max-md:mt-10'>
                     Start
                   </button>
                 </Link>
+                </div>
               </div>
             </div>
             <div className='flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full'>
-              <div className='flex flex-col grow px-6 pt-6 pb-20 w-full text-black bg-white rounded border border-gray-200 border-solid max-md:px-5 max-md:mt-9'>
+              <div className='flex flex-col grow px-6 pt-6 pb-20 w-full text-black bg-white rounded-xl border border-gray-300 border-solid max-md:px-5 max-md:mt-9'>
                 <div className='text-xs'>Module 3</div>
                 <img
                   loading='lazy'
                   srcSet='../d2da962a5f2adbf6151cccafd66e5ef1842a7363b97c10c69a4edeec19b5e4a3.png'
-                  className='mt-4 w-full aspect-[1.72]'
+                  className='mt-4 ml-2 w-[95%] aspect-[1.72]'
                 />
-                <div className='mt-5 text-xl font-bold'>Argument</div>
-                <div className='mt-3.5 mr-6 text-base max-md:mr-2.5'>
+                <div className='mt-5 ml-2 text-xl font-bold'>Argument</div>
+                <div className='mt-3.5 ml-2 mr-6 text-base max-md:mr-2.5 text-justify'>
                   An argument explains what might resolve/address your problem,
                   using clear and concise language
                 </div>
               </div>
             </div>
             <div className='flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full'>
-              <div className='flex flex-col grow pt-6 pb-20 pl-6 w-full bg-white rounded border border-gray-200 border-solid max-md:mt-9'>
+              <div className='flex flex-col grow pt-6 pb-20 pl-6 w-full bg-white rounded-xl border border-gray-300 border-solid max-md:mt-9'>
                 <div className='text-xs text-black'>Module 4</div>
-                <div className='flex flex-col justify-center px-px mt-4 rounded bg-zinc-300 max-md:pr-5'>
+                <div className='flex flex-col justify-center px-px mt-4 mr-4 rounded max-md:pr-5'>
                   <img
                     loading='lazy'
                     srcSet='../36613dda2bd9d3e8dfce3118be4052265a66b78b8274ad4608cd9590176496d1.png'
-                    className='w-full aspect-[1.72]'
+                    className='ml-1 w-[95%] aspect-[1.72]'
                   />
                 </div>
-                <div className='mt-5 text-xl font-bold text-black'>
+                <div className='mt-5 ml-2 text-xl font-bold text-black w-[80%]'>
                   Research Question
                 </div>
-                <div className='mt-4 text-base text-black'>
+                <div className='mt-4 ml-2 text-justify text-base text-black w-[86%] text-wrap'>
                   Quantitative research questions inquire about the
                   relationships among variables that the investigator seeks to
                   know.
                 </div>
+                
               </div>
             </div>
           </div>
