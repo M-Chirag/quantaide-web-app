@@ -80,7 +80,8 @@ export default function Stage2() {
                       </div>
                     </div>
 
-                    <div className='flex gap-5 mt-7 p-4 bg-white rounded-lg border border-gray-200 border-solid '>
+                    <p className='font-bold mt-7 text-lg'>Example: </p>
+                    <div className='flex gap-5 mt-4 p-4 bg-white rounded-lg border border-gray-200 border-solid '>
                       <div className='flex gap-0 justify-center items-center px-2 py-2 bg-orange-400 rounded-md h-[40px] w-40'>
                         <img
                           loading='lazy'
