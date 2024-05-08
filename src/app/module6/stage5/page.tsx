@@ -163,7 +163,7 @@ export default function Stage2() {
                   <div className='flex justify-end mb-10'>
                     <Link href={'../module6/complete'} passHref>
                       <button className='justify-center self-end px-10 py-2.5 mt-12 text-base font-bold text-white bg-orange-400 rounded-md max-md:px-5 max-md:mt-10'>
-                        Next
+                        Done
                       </button>
                     </Link>
                   </div>
