@@ -29,7 +29,7 @@ export default function Stage1() {
                     <div className='flex flex-col grow shrink-0 justify-end px-5 basis-0 w-fit'>
                       <div className='text-xs'>Justification</div>
                       <div className='mt-1 text-xl font-bold'>
-                        What is an argument statement?
+                        What does this problem matter?
                       </div>
                     </div>
                   </div>
