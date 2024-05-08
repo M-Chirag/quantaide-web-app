@@ -13,9 +13,9 @@ export default function Stage2() {
       <div className='flex flex-row max-md:flex-col max-md:gap-50'>
         <div className='flex flex-col bg-white'>
           <div className='self-center w-full max-w-[1372px] max-md:max-w-full'>
-            <div className='flex gap-5 max-md:flex-col max-md:gap-0'>
-              <div className='flex flex-col w-[69%] max-md:ml-0 max-md:w-full'>
-                <div className='flex flex-col mt-20 text-black max-md:mt-10 max-md:max-w-full'>
+            <div className='flex gap-10 max-md:flex-col max-md:gap-0'>
+              <div className='flex flex-col w-[90%] max-md:ml-0 max-md:w-full'>
+                <div className='flex flex-col mt-20 text-gray-800 max-md:mt-10 max-md:max-w-full'>
                   <div className='flex gap-5 self-start'>
                     <Link href='/module6/stage4'>
                       <button>
@@ -35,14 +35,14 @@ export default function Stage2() {
                   </div>
 
                   {/* Form Begins */}
-                  <div className='self-center'>
+                  <div className='self-center ml-20'>
                     <div className='flex flex-col justify-center mt-5 p-6 w-full bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 '>
                       <div className='text-base font-semibold leading-7 max-md:max-w-full'>
                         1. How many hours do you listen to music per day?
                       </div>
                       <div className='flex flex-col items-start p-4 mt-3 text-base leading-5 whitespace-nowrap bg-white rounded border border-solid border-neutral-400 border-opacity-50 max-md:pr-5 max-md:max-w-full'>
                         <div className='flex gap-1.5'>
-                          <div>10-15</div>
+                          <input className='w-[200px]' placeholder='Enter your response here'></input>
                         </div>
                       </div>
                     </div>
