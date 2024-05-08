@@ -36,9 +36,9 @@ export default function Stage2() {
 
                   {/* Form Begins */}
                   <div className='self-center'>
-                    <div className='flex flex-col justify-center mt-5 p-6 w-full bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full'>
+                    <div className='flex flex-col justify-center mt-5 p-6 w-full bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 '>
                       <div className='text-base font-semibold leading-7 max-md:max-w-full'>
-                        1. Which age group do you belong to?
+                        1. How many hours do you listen to music per day?
                       </div>
                       <div className='flex flex-col items-start p-4 mt-3 text-base leading-5 whitespace-nowrap bg-white rounded border border-solid border-neutral-400 border-opacity-50 max-md:pr-5 max-md:max-w-full'>
                         <div className='flex gap-1.5'>
@@ -61,7 +61,7 @@ export default function Stage2() {
                     </div>
                     <div className='flex flex-col justify-center p-6 mt-7 w-full bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full'>
                       <div className='text-base font-semibold leading-7 max-md:max-w-full'>
-                        2. What is your primary music streaming service?
+                        2. What platform do you use to listen to music the most?
                       </div>
                       <div className='flex flex-col items-start p-4 mt-3 text-base leading-5 bg-white rounded border border-solid border-neutral-400 border-opacity-50 max-md:pr-5 max-md:max-w-full'>
                         <div className='flex gap-1.5 whitespace-nowrap'>
@@ -84,7 +84,7 @@ export default function Stage2() {
                     </div>
                     <div className='flex flex-col justify-center p-6 mt-7 w-full bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full'>
                       <div className='text-base font-semibold leading-7 max-md:max-w-full'>
-                        3. Do you listen to music while working?
+                        3. Do you play an instrument on a regular basis?
                       </div>
                       <div className='flex flex-col items-start p-4 mt-3 text-base leading-5 bg-white rounded border border-solid border-neutral-400 border-opacity-50 max-md:pr-5 max-md:max-w-full'>
                         <div className='flex gap-1.5 whitespace-nowrap'>
@@ -97,38 +97,10 @@ export default function Stage2() {
                         </div>
                       </div>
                     </div>
-                    <div className='flex flex-col justify-center p-6 mt-7 w-full bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full'>
-                      <div className='text-base font-semibold leading-7 max-md:max-w-full'>
-                        4. What is your favorite genre of music?
-                      </div>
-                      <div className='flex flex-col items-start p-4 mt-3 text-base leading-5 bg-white rounded border border-solid border-neutral-400 border-opacity-50 max-md:pr-5 max-md:max-w-full'>
-                        <div className='flex gap-1.5 whitespace-nowrap'>
-                          <div className='shrink-0 w-5 h-5 bg-white border border-solid shadow-sm border-zinc-300 rounded-[100px]' />
-                          <div>Pop</div>
-                        </div>
-                        <div className='flex gap-1.5 mt-4'>
-                          <div className='shrink-0 w-5 h-5 bg-white border border-solid shadow-sm border-zinc-300 rounded-[100px]' />
-                          <div>Hip Hop</div>
-                        </div>
-                        <div className='flex gap-1.5 mt-4 whitespace-nowrap'>
-                          <div className='shrink-0 w-5 h-5 bg-white border border-solid shadow-sm border-zinc-300 rounded-[100px]' />
-                          <div>R&B</div>
-                        </div>
-                        <div className='flex gap-1.5 mt-4 whitespace-nowrap'>
-                          <div className='shrink-0 w-5 h-5 bg-white border border-solid shadow-sm border-zinc-300 rounded-[100px]' />
-                          <div>Dance</div>
-                        </div>
-                        <div className='flex gap-1.5 mt-4'>
-                          <div className='shrink-0 w-5 h-5 bg-white border border-solid shadow-sm border-zinc-300 rounded-[100px]' />
-                          <div>Classic Rock</div>
-                        </div>
-                      </div>
-                    </div>
                     <div className='flex flex-col justify-center p-6 mt-7 w-full font-semibold bg-white rounded-lg border border-gray-200 border-solid max-md:px-5 max-md:max-w-full'>
                       <div className='text-base leading-7 max-md:max-w-full'>
-                        5. Rank your anxiety on a scale of 0-5. 0 - I do not
-                        experience this. 5 - I experience this regularly,
-                        constantly/or to an extreme.
+                        4. Rank your anxiety where 1 is never experiencing
+                        anxiety and 5 is frequently experiencing anxiety.
                       </div>
                       <div className='flex gap-5 justify-between items-center p-4 mt-3 text-base leading-5 bg-white rounded border border-solid border-neutral-400 border-opacity-50 max-md:flex-wrap'>
                         <div className='my-auto'>I do not experience this</div>

@@ -420,9 +420,10 @@ export default function Stage4() {
                         )}
                         {
                           <div className='justify-center leading-7 text-black max-md:max-w-full'>
-                            1. You are curious about how much a person listens
-                            to music per day. Create a survey question for this
-                            using interval data.
+                            1. You as a researcher are interested in daily music
+                            listening patterns in users. Create a survey
+                            question to ask the user the amount of music they
+                            listen to
                           </div>
                         }
 
@@ -462,10 +463,10 @@ export default function Stage4() {
                           </div>
                         )}
                         <div className='leading-5 text-black max-md:max-w-full'>
-                          2. We are curious what platform a user most frequently
-                          uses to listen to music. Create a survey question to
-                          collect categorical data. Then create four options for
-                          the user to choose from.
+                          2. You are curious about the most popular music
+                          streaming platforms. Create a survey question to
+                          collect categorical data from users. Then create four
+                          options for the user to choose from.
                         </div>
                         {/* value={q2Text}
                           onChange={(e) => setq2Text(e.target.value)} */}
@@ -533,10 +534,9 @@ export default function Stage4() {
                           </div>
                         )}
                         <div className='leading-7 text-black max-md:max-w-full'>
-                          3. We are curious if users play instruments on a
-                          regular basis. Create a question to ask the user this
-                          dichotomous question. Then write two options for the
-                          user to choose from.
+                          3. You are curious if playing instruments regularly
+                          has an impact on anxiety. Create a dichotomous
+                          question for this.
                         </div>
                         <input
                           type='text'
@@ -546,25 +546,27 @@ export default function Stage4() {
                         ></input>
                         <div className='flex flex-col justify-center items-start p-4 mt-3 text-base leading-5 bg-white rounded border border-solid border-neutral-400 border-opacity-50 max-md:pr-5 max-md:max-w-full'>
                           {/* <!-- Radio buttons for dichotomous question --> */}
-                          {['Yes', 'No'].map((option, index) => (
-                            <div
-                              key={index}
-                              className='flex gap-1.5 items-center mt-2'
-                            >
-                              <input
-                                type='radio'
-                                id={`option${index}`}
-                                name='platform'
-                                className='shrink-0 w-5 h-5 bg-white border border-solid shadow-sm border-zinc-300 text-black placeholder-gray-400 rounded-full'
-                              />
-                              <input
-                                type='text'
-                                name={`q3_option${index}`}
-                                className='flex-1 ml-2 p-2 border text-black placeholder-gray-400 border-gray-300 rounded'
-                                placeholder={option}
-                              />
-                            </div>
-                          ))}
+                          {['Enter Option 1', 'Enter Option 2'].map(
+                            (option, index) => (
+                              <div
+                                key={index}
+                                className='flex gap-1.5 items-center mt-2'
+                              >
+                                <input
+                                  type='radio'
+                                  id={`option${index}`}
+                                  name='platform'
+                                  className='shrink-0 w-5 h-5 bg-white border border-solid shadow-sm border-zinc-300 text-black placeholder-gray-400 rounded-full'
+                                />
+                                <input
+                                  type='text'
+                                  name={`q3_option${index}`}
+                                  className='flex-1 ml-2 p-2 border text-black placeholder-gray-400 border-gray-300 rounded'
+                                  placeholder={option}
+                                />
+                              </div>
+                            )
+                          )}
                         </div>
                       </div>
 
@@ -595,10 +597,10 @@ export default function Stage4() {
                           </div>
                         )}
                         <div className='justify-center leading-7 text-black max-md:max-w-full'>
-                          4. We are curious about measuring anxiety levels.
-                          Create a survey prompt to ask the person to rank their
-                          anxiety on an ordinal scale. Then below, add labels to
-                          the scale values.
+                          4. You are curious about individuals' well-being over
+                          time. Create a question prompt that encourages users
+                          to reflect on their anxiety from the past week using
+                          an ordinal scale.
                         </div>
                         <input
                           type='text'
