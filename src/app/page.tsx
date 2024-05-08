@@ -17,7 +17,7 @@ export default function Home() {
           className='ml-40 flex flex-col w-4/5'
           style={{ minWidth: '590px' }}
         >
-          <div className='font-bold text-2xl ml-3 mt-20'> Dashboard! </div>
+          <div className='font-bold text-2xl ml-3 mt-20'> Dashboard </div>
           <div
             className='flex items-center ml-3 mt-2'
             style={{
