@@ -42,20 +42,7 @@ export default function Stage2() {
                       </div>
                       <div className='flex flex-col items-start p-4 mt-3 text-base leading-5 whitespace-nowrap bg-white rounded border border-solid border-neutral-400 border-opacity-50 max-md:pr-5 max-md:max-w-full'>
                         <div className='flex gap-1.5'>
-                          <div className='shrink-0 w-5 h-5 bg-white border border-solid shadow-sm border-zinc-300 rounded-[100px]' />
                           <div>10-15</div>
-                        </div>
-                        <div className='flex gap-1.5 mt-4'>
-                          <div className='shrink-0 w-5 h-5 bg-white border border-solid shadow-sm border-zinc-300 rounded-[100px]' />
-                          <div>16-20</div>
-                        </div>
-                        <div className='flex gap-1.5 mt-4'>
-                          <div className='shrink-0 w-5 h-5 bg-white border border-solid shadow-sm border-zinc-300 rounded-[100px]' />
-                          <div>21-25</div>
-                        </div>
-                        <div className='flex gap-1.5 mt-4'>
-                          <div className='shrink-0 w-5 h-5 bg-white border border-solid shadow-sm border-zinc-300 rounded-[100px]' />
-                          <div>26-30</div>
                         </div>
                       </div>
                     </div>
