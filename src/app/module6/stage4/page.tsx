@@ -597,7 +597,7 @@ export default function Stage4() {
                           </div>
                         )}
                         <div className='justify-center leading-7 text-black max-md:max-w-full'>
-                          4. You are curious about individuals' well-being over
+                          4. You are curious about individuals well-being over
                           time. Create a question prompt that encourages users
                           to reflect on their anxiety from the past week using
                           an ordinal scale.
